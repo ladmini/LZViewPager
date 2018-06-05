@@ -46,7 +46,7 @@ $ brew install carthage
 Add Tabman to your `Cartfile`:
 
 ```ogdl
-github "uias/Tabman" ~> 1.0
+github "ladmini/LZViewPager" ~> 0.0.1
 ```
 
 ## 🚀 Usage
@@ -102,7 +102,7 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
     }
     
     func button(at index: Int) -> UIButton {
-        //Custom your button styles here
+        //Customize your button styles here
         let button = UIButton()
         button.setTitleColor(UIColor.black, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
@@ -113,7 +113,7 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
 3) All done! 🎉
 
 ### Customization
-You can custom you button styles in datasource method "func button(at index: Int) -> UIButton" you can also Customize other styles by implementing other datasource methods example:
+You can customize you button styles in datasource method "func button(at index: Int) -> UIButton" you can also customize other styles by implementing other datasource methods example:
 
 ```swift
 func heightForHeader() -> CGFloat
@@ -127,9 +127,9 @@ func shouldShowIndicator() -> Bool
 Implementing delegate methods if needed
 
 ```swift
-didSelectButton(at index: Int)
-willTransition(to index: Int)
-didTransition(to index: Int)
+func didSelectButton(at index: Int)
+func willTransition(to index: Int)
+func didTransition(to index: Int)
 ```
 ### Instance methods for LZViewPager
 If you want to locating to some page programming you can call select(index: Int) method
