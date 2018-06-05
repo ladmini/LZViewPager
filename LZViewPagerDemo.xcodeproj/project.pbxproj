@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B3F5A8BDFA32335661C7CC2 /* Pods_LZViewPagerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4039B533C81255F7B522AE /* Pods_LZViewPagerDemo.framework */; };
+		AC2188DE20C660660075DE35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188DD20C660660075DE35 /* AppDelegate.swift */; };
+		AC2188E020C660660075DE35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188DF20C660660075DE35 /* ViewController.swift */; };
+		AC2188E320C660660075DE35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2188E120C660660075DE35 /* Main.storyboard */; };
+		AC2188E520C660660075DE35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2188E420C660660075DE35 /* Assets.xcassets */; };
+		AC2188E820C660660075DE35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2188E620C660660075DE35 /* LaunchScreen.storyboard */; };
+		AC2188FA20C669340075DE35 /* LZViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188F720C669340075DE35 /* LZViewPager.swift */; };
+		AC2188FB20C669340075DE35 /* LZViewPagerContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188F820C669340075DE35 /* LZViewPagerContent.swift */; };
+		AC2188FC20C669340075DE35 /* LZViewPagerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188F920C669340075DE35 /* LZViewPagerHeader.swift */; };
+		AC2188FF20C66B3B0075DE35 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188FE20C66B3B0075DE35 /* BaseViewController.swift */; };
+		AC21890120C66C5A0075DE35 /* ContentViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC21890020C66C5A0075DE35 /* ContentViewController1.swift */; };
+		AC21890320C66CB50075DE35 /* ContentViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC21890220C66CB50075DE35 /* ContentViewController2.swift */; };
+		AC21890520C66CBF0075DE35 /* ContentViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC21890420C66CBF0075DE35 /* ContentViewController3.swift */; };
+		AC21890720C66CCA0075DE35 /* ContentViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC21890620C66CCA0075DE35 /* ContentViewController4.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9D654502B101EB09E93ACDFC /* Pods-LZViewPagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZViewPagerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZViewPagerDemo/Pods-LZViewPagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AC2188DA20C660660075DE35 /* LZViewPagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZViewPagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2188DD20C660660075DE35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC2188DF20C660660075DE35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC2188E220C660660075DE35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC2188E420C660660075DE35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC2188E720C660660075DE35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC2188E920C660660075DE35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC2188F720C669340075DE35 /* LZViewPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LZViewPager.swift; sourceTree = "<group>"; };
+		AC2188F820C669340075DE35 /* LZViewPagerContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LZViewPagerContent.swift; sourceTree = "<group>"; };
+		AC2188F920C669340075DE35 /* LZViewPagerHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LZViewPagerHeader.swift; sourceTree = "<group>"; };
+		AC2188FE20C66B3B0075DE35 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AC21890020C66C5A0075DE35 /* ContentViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController1.swift; sourceTree = "<group>"; };
+		AC21890220C66CB50075DE35 /* ContentViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController2.swift; sourceTree = "<group>"; };
+		AC21890420C66CBF0075DE35 /* ContentViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController3.swift; sourceTree = "<group>"; };
+		AC21890620C66CCA0075DE35 /* ContentViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController4.swift; sourceTree = "<group>"; };
+		D61B615BFEE1762FB1FADB19 /* Pods-LZViewPagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZViewPagerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZViewPagerDemo/Pods-LZViewPagerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		EA4039B533C81255F7B522AE /* Pods_LZViewPagerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZViewPagerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC2188D720C660660075DE35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B3F5A8BDFA32335661C7CC2 /* Pods_LZViewPagerDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56316FED87A1208C5D918EAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA4039B533C81255F7B522AE /* Pods_LZViewPagerDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		769780DE3260F768504FC8DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D654502B101EB09E93ACDFC /* Pods-LZViewPagerDemo.debug.xcconfig */,
+				D61B615BFEE1762FB1FADB19 /* Pods-LZViewPagerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC2188D120C660660075DE35 = {
+			isa = PBXGroup;
+			children = (
+				AC2188F620C669340075DE35 /* LZViewPager */,
+				AC2188DC20C660660075DE35 /* LZViewPagerDemo */,
+				AC2188DB20C660660075DE35 /* Products */,
+				769780DE3260F768504FC8DC /* Pods */,
+				56316FED87A1208C5D918EAD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AC2188DB20C660660075DE35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC2188DA20C660660075DE35 /* LZViewPagerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC2188DC20C660660075DE35 /* LZViewPagerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				AC2188FE20C66B3B0075DE35 /* BaseViewController.swift */,
+				AC2188FD20C66AEF0075DE35 /* ContentsController */,
+				AC2188DD20C660660075DE35 /* AppDelegate.swift */,
+				AC2188DF20C660660075DE35 /* ViewController.swift */,
+				AC2188E120C660660075DE35 /* Main.storyboard */,
+				AC2188E420C660660075DE35 /* Assets.xcassets */,
+				AC2188E620C660660075DE35 /* LaunchScreen.storyboard */,
+				AC2188E920C660660075DE35 /* Info.plist */,
+			);
+			path = LZViewPagerDemo;
+			sourceTree = "<group>";
+		};
+		AC2188F620C669340075DE35 /* LZViewPager */ = {
+			isa = PBXGroup;
+			children = (
+				AC2188F720C669340075DE35 /* LZViewPager.swift */,
+				AC2188F820C669340075DE35 /* LZViewPagerContent.swift */,
+				AC2188F920C669340075DE35 /* LZViewPagerHeader.swift */,
+			);
+			path = LZViewPager;
+			sourceTree = "<group>";
+		};
+		AC2188FD20C66AEF0075DE35 /* ContentsController */ = {
+			isa = PBXGroup;
+			children = (
+				AC21890020C66C5A0075DE35 /* ContentViewController1.swift */,
+				AC21890220C66CB50075DE35 /* ContentViewController2.swift */,
+				AC21890420C66CBF0075DE35 /* ContentViewController3.swift */,
+				AC21890620C66CCA0075DE35 /* ContentViewController4.swift */,
+			);
+			path = ContentsController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC2188D920C660660075DE35 /* LZViewPagerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC2188EC20C660660075DE35 /* Build configuration list for PBXNativeTarget "LZViewPagerDemo" */;
+			buildPhases = (
+				5EDA8D85B41676B277FEDB5D /* [CP] Check Pods Manifest.lock */,
+				AC2188D620C660660075DE35 /* Sources */,
+				AC2188D720C660660075DE35 /* Frameworks */,
+				AC2188D820C660660075DE35 /* Resources */,
+				75780CF603ABA76E8CAAC60D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LZViewPagerDemo;
+			productName = LZViewPagerDemo;
+			productReference = AC2188DA20C660660075DE35 /* LZViewPagerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC2188D220C660660075DE35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = AGS;
+				TargetAttributes = {
+					AC2188D920C660660075DE35 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = AC2188D520C660660075DE35 /* Build configuration list for PBXProject "LZViewPagerDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC2188D120C660660075DE35;
+			productRefGroup = AC2188DB20C660660075DE35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC2188D920C660660075DE35 /* LZViewPagerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC2188D820C660660075DE35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC2188E820C660660075DE35 /* LaunchScreen.storyboard in Resources */,
+				AC2188E520C660660075DE35 /* Assets.xcassets in Resources */,
+				AC2188E320C660660075DE35 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EDA8D85B41676B277FEDB5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LZViewPagerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75780CF603ABA76E8CAAC60D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LZViewPagerDemo/Pods-LZViewPagerDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZViewPagerDemo/Pods-LZViewPagerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC2188D620C660660075DE35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC2188E020C660660075DE35 /* ViewController.swift in Sources */,
+				AC2188FC20C669340075DE35 /* LZViewPagerHeader.swift in Sources */,
+				AC21890120C66C5A0075DE35 /* ContentViewController1.swift in Sources */,
+				AC21890320C66CB50075DE35 /* ContentViewController2.swift in Sources */,
+				AC2188FA20C669340075DE35 /* LZViewPager.swift in Sources */,
+				AC2188FB20C669340075DE35 /* LZViewPagerContent.swift in Sources */,
+				AC2188DE20C660660075DE35 /* AppDelegate.swift in Sources */,
+				AC21890720C66CCA0075DE35 /* ContentViewController4.swift in Sources */,
+				AC21890520C66CBF0075DE35 /* ContentViewController3.swift in Sources */,
+				AC2188FF20C66B3B0075DE35 /* BaseViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AC2188E120C660660075DE35 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC2188E220C660660075DE35 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC2188E620C660660075DE35 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC2188E720C660660075DE35 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC2188EA20C660660075DE35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC2188EB20C660660075DE35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC2188ED20C660660075DE35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D654502B101EB09E93ACDFC /* Pods-LZViewPagerDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N93VSYVGK5;
+				INFOPLIST_FILE = LZViewPagerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ags.LZViewPagerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC2188EE20C660660075DE35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D61B615BFEE1762FB1FADB19 /* Pods-LZViewPagerDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N93VSYVGK5;
+				INFOPLIST_FILE = LZViewPagerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ags.LZViewPagerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC2188D520C660660075DE35 /* Build configuration list for PBXProject "LZViewPagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2188EA20C660660075DE35 /* Debug */,
+				AC2188EB20C660660075DE35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC2188EC20C660660075DE35 /* Build configuration list for PBXNativeTarget "LZViewPagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2188ED20C660660075DE35 /* Debug */,
+				AC2188EE20C660660075DE35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC2188D220C660660075DE35 /* Project object */;
+}
