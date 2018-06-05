@@ -83,20 +83,19 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
     private var subControllers:[UIViewController] = []  
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
 		viewPager.dataSource = self
-        viewPager.delegate = self
-        let vc1 = BaseViewController.createFromNib(storyBoardId: "ContentViewController1") as! ContentViewController1
-        vc1.title = "Title1"
-        let vc2 = BaseViewController.createFromNib(storyBoardId: "ContentViewController2") as! ContentViewController2
-        vc2.title = "Title2"
-        let vc3 = BaseViewController.createFromNib(storyBoardId: "ContentViewController3") as! ContentViewController3
-        vc3.title = "Title3"
-        let vc4 = BaseViewController.createFromNib(storyBoardId: "ContentViewController4") as! ContentViewController4
-        vc4.title = "Title4"
-        subControllers = [vc1, vc2, vc3, vc4]
-        viewPager.hostController = self
-        viewPager.reload()
+		viewPager.delegate = self
+		let vc1 = BaseViewController.createFromNib(storyBoardId: "ContentViewController1") as! ContentViewController1
+		vc1.title = "Title1"
+		let vc2 = BaseViewController.createFromNib(storyBoardId: "ContentViewController2") as! ContentViewController2
+		vc2.title = "Title2"
+		let vc3 = BaseViewController.createFromNib(storyBoardId: "ContentViewController3") as! ContentViewController3
+		vc3.title = "Title3"
+		let vc4 = BaseViewController.createFromNib(storyBoardId: "ContentViewController4") as! ContentViewController4
+		vc4.title = "Title4"
+		subControllers = [vc1, vc2, vc3, vc4]
+		viewPager.hostController = self
+		viewPager.reload()
 	}
 }
 ```
@@ -153,7 +152,7 @@ func select(index: Int)
 If you are encountering issues with LZViewPager, please raise an [issue](https://github.com/ladmini/LZViewPager/issues/new).
 
 ## 👨🏻‍💻 About
-- Created by [Ladmini](https://github.com/ladmini) ([@ladmini](ladmini@126.com))
+- Created by [Ladmini](https://github.com/ladmini) ([Mail to ladmini](mailto:ladmini@126.com))
 - Contributed to by a growing [list of others](https://github.com/ladmini/LZViewPager/graphs/contributors).
 
 
