@@ -1,28 +1,18 @@
 
 <p align="center">
-    <a href="https://travis-ci.org/uias/Tabman">
-        <img src="https://travis-ci.org/uias/Tabman.svg?branch=master" />
+    <a href="https://github.com/ladmini/LZViewPager">
+        <img src="webimages/1" />
     </a>
-    <img src="https://img.shields.io/badge/Swift-4-orange.svg?style=flat" />
-    <a href="https://cocoapods.org/pods/Tabman">
-        <img src="https://img.shields.io/cocoapods/v/Tabman.svg" alt="CocoaPods" />
+    <a href="https://github.com/ladmini/LZViewPager">
+        <img src="webimages/2" />
     </a>
-	<a href="https://cocoapods.org/pods/Tabman">
-        <img src="https://img.shields.io/cocoapods/p/Tabman.svg" alt="Platforms" />
-    </a>
-	<a href="https://github.com/Carthage/Carthage">
-        <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" />
-    </a>
-	<a href="https://codecov.io/gh/uias/Tabman">
-        <img src="https://codecov.io/gh/uias/Tabman/branch/master/graph/badge.svg" />
-    </a>
-	<a href="https://github.com/uias/Tabman/releases">
-        <img src="https://img.shields.io/github/release/uias/Tabman.svg" />
+	<a href="https://github.com/ladmini/LZViewPager">
+        <img src="webimages/3"/>
     </a>
 </p>
 
 <p align="center">
-    <img src="screenshot.png" width="300" alt=""/>
+    <img src="webimages/screenshot.png" width="300" alt=""/>
 </p>
  
 ## ⭐️ Features
@@ -68,7 +58,7 @@ github "uias/Tabman" ~> 1.0
 2) Drag a UIView into ViewVontroller's view and set it's type to LZViewPager, then set an outlet variable as "viewPager"
 
 <p align="center">
-    <img src="screenshot2.png" width="300" alt=""/>
+    <img src="webimages/screenshot2.png" width="300" alt=""/>
 </p>
 
 3) Set the items you want to display
@@ -80,23 +70,23 @@ github "uias/Tabman" ~> 1.0
 ```swift
 class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSource {
     @IBOutlet weak var viewPager: LZViewPager!
-    private var subControllers:[UIViewController] = []  
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		viewPager.dataSource = self
-		viewPager.delegate = self
-		let vc1 = BaseViewController.createFromNib(storyBoardId: "ContentViewController1") as! ContentViewController1
-		vc1.title = "Title1"
-		let vc2 = BaseViewController.createFromNib(storyBoardId: "ContentViewController2") as! ContentViewController2
-		vc2.title = "Title2"
-		let vc3 = BaseViewController.createFromNib(storyBoardId: "ContentViewController3") as! ContentViewController3
-		vc3.title = "Title3"
-		let vc4 = BaseViewController.createFromNib(storyBoardId: "ContentViewController4") as! ContentViewController4
-		vc4.title = "Title4"
-		subControllers = [vc1, vc2, vc3, vc4]
-		viewPager.hostController = self
-		viewPager.reload()
-	}
+    private var subControllers:[UIViewController] = []
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewPager.dataSource = self
+        viewPager.delegate = self
+        viewPager.hostController = self
+        let vc1 = BaseViewController.createFromNib(storyBoardId: "ContentViewController1") as! ContentViewController1
+        vc1.title = "Title1"
+        let vc2 = BaseViewController.createFromNib(storyBoardId: "ContentViewController2") as! ContentViewController2
+        vc2.title = "Title2"
+        let vc3 = BaseViewController.createFromNib(storyBoardId: "ContentViewController3") as! ContentViewController3
+        vc3.title = "Title3"
+        let vc4 = BaseViewController.createFromNib(storyBoardId: "ContentViewController4") as! ContentViewController4
+        vc4.title = "Title4"
+        subControllers = [vc1, vc2, vc3, vc4]
+        viewPager.reload()
+    }
 }
 ```
 
