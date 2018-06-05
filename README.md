@@ -1,13 +1,13 @@
 
 <p align="center">
     <a href="https://github.com/ladmini/LZViewPager">
-        <img src="webimages/1" />
+        <img src="webimages/1.svg" />
     </a>
     <a href="https://github.com/ladmini/LZViewPager">
-        <img src="webimages/2" />
+        <img src="webimages/2.svg" />
     </a>
 	<a href="https://github.com/ladmini/LZViewPager">
-        <img src="webimages/3"/>
+        <img src="webimages/3.svg"/>
     </a>
 </p>
 
