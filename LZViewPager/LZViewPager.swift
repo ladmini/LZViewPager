@@ -14,7 +14,7 @@ class LZConstants {
     static let defaultIndicatorHight: CGFloat = 2.0
 }
 
-@objc protocol LZViewPagerDataSource: AnyObject{
+@objc public protocol LZViewPagerDataSource: AnyObject{
     @objc optional func heightForHeader() -> CGFloat
     @objc optional func heightForIndicator(at index: Int) -> CGFloat
     @objc optional func colorForIndicator(at index: Int) -> UIColor
@@ -24,13 +24,13 @@ class LZConstants {
     func button(at index: Int) -> UIButton
 }
 
-@objc protocol LZViewPagerDelegate: AnyObject{
+@objc public protocol LZViewPagerDelegate: AnyObject{
     @objc optional func didSelectButton(at index: Int)
     @objc optional func willTransition(to index: Int)
     @objc optional func didTransition(to index: Int)
 }
 
-class LZViewPager : UIView {
+public class LZViewPager : UIView {
     @IBOutlet var delegate: LZViewPagerDelegate?
     @IBOutlet var dataSource: LZViewPagerDataSource?
     public var hostController: UIViewController?
