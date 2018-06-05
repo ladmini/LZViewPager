@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OuC-wj-0nG" customClass="LZViewPager" customModule="LZViewPagerDemo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="2JW-Bx-dHZ"/>
@@ -30,7 +30,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OuC-wj-0nG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5WN-g0-FfE"/>
-                            <constraint firstItem="OuC-wj-0nG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="SSJ-VJ-yrh"/>
+                            <constraint firstItem="OuC-wj-0nG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="SSJ-VJ-yrh"/>
                             <constraint firstItem="OuC-wj-0nG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sJr-cm-fIb"/>
                             <constraint firstItem="OuC-wj-0nG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ucI-OW-w9V"/>
                         </constraints>

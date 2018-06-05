@@ -28,17 +28,18 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
         return button
     }
     
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let vc1 = BaseViewController.createFromNib(storyBoardId: "ContentViewController1") as! ContentViewController1
-        vc1.title = "标题1"
+        vc1.title = "Title1"
         let vc2 = BaseViewController.createFromNib(storyBoardId: "ContentViewController2") as! ContentViewController2
-        vc2.title = "标题2"
+        vc2.title = "Title2"
         let vc3 = BaseViewController.createFromNib(storyBoardId: "ContentViewController3") as! ContentViewController3
-        vc3.title = "标题3"
+        vc3.title = "Title3"
         let vc4 = BaseViewController.createFromNib(storyBoardId: "ContentViewController4") as! ContentViewController4
-        vc4.title = "标题4"
+        vc4.title = "Title4"
         subControllers = [vc1, vc2, vc3, vc4]
         viewPager.hostController = self
         viewPager.reload()
