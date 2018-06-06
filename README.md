@@ -30,7 +30,7 @@ LZViewPager requires iOS 9, Swift 4
 Tabman is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'LZViewPager', '~> 0.0.1'
+pod 'LZViewPager', '~> 0.5.0'
 ```
 
 And run `pod install`.
@@ -46,7 +46,7 @@ $ brew install carthage
 Add Tabman to your `Cartfile`:
 
 ```ogdl
-github "ladmini/LZViewPager" ~> 0.0.1
+github "ladmini/LZViewPager" ~> 0.5.0
 ```
 
 ## 🚀 Usage
