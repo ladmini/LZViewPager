@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+
 class LZConstants {
     static let defaultIndicatorBgColor = UIColor(red: 255.0/255.0, green: 36.0/255.0, blue: 79.0/255.0, alpha: 1.0)
     static let defaultHeaderHight: CGFloat = 40.0

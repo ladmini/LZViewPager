@@ -27,7 +27,7 @@ LZViewPager requires iOS 9, Swift 4
 
 ## 📲 Installation
 ### CocoaPods
-Tabman is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
+LZViewPager is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'LZViewPager', '~> 0.6.0'
@@ -36,7 +36,7 @@ pod 'LZViewPager', '~> 0.6.0'
 And run `pod install`.
 
 ### Carthage
-Tabman is also available through [Carthage](https://github.com/Carthage/Carthage). Simply install carthage with [Homebrew](http://brew.sh/) using the following command:
+LZViewPager is also available through [Carthage](https://github.com/Carthage/Carthage). Simply install carthage with [Homebrew](http://brew.sh/) using the following command:
 
 ```bash
 $ brew update
@@ -139,6 +139,10 @@ If you want to locating to some page programming you can call select(index: Int)
 ```swift
 func select(index: Int)
 ```
+## How to run this demo
+1) Clone this repository
+2) Execute carthage update
+3) Build and Run
 
 ## ⚠️ Troubleshooting
 If you are encountering issues with LZViewPager, please raise an [issue](https://github.com/ladmini/LZViewPager/issues/new).
