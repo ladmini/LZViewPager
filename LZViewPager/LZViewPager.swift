@@ -31,8 +31,8 @@ class LZConstants {
 }
 
 public class LZViewPager : UIView {
-    @IBOutlet var delegate: LZViewPagerDelegate?
-    @IBOutlet var dataSource: LZViewPagerDataSource?
+    @IBOutlet public var delegate: LZViewPagerDelegate?
+    @IBOutlet public var dataSource: LZViewPagerDataSource?
     public var hostController: UIViewController?
 
     private lazy var headerView: LZViewPagerHeader = {
