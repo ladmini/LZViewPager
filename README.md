@@ -30,7 +30,7 @@ LZViewPager requires iOS 9, Swift 4
 Tabman is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'LZViewPager', '~> 0.5.0'
+pod 'LZViewPager', '~> 0.6.0'
 ```
 
 And run `pod install`.
@@ -43,10 +43,12 @@ $ brew update
 $ brew install carthage
 ```
 
-Add Tabman to your `Cartfile`:
+#### Carthage dependency
+Since this project depends on SnapKit(A Swift Autolayout DSL for iOS & OS X). You can add LZViewPager to your `Cartfile` like this:
 
 ```ogdl
-github "ladmini/LZViewPager" ~> 0.5.0
+github "SnapKit/SnapKit" ~> 4.0.0
+github "ladmini/LZViewPager" ~> 0.6.0
 ```
 
 ## 🚀 Usage
@@ -112,7 +114,7 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
 
 3) All done! 🎉
 
-### Customization
+## Customization
 You can customize you button styles in datasource method "func button(at index: Int) -> UIButton" you can also customize other styles by implementing other datasource methods example:
 
 ```swift
@@ -123,7 +125,7 @@ func shouldShowIndicator() -> Bool
 ```
 
 
-### Delegate
+## Delegate
 Implementing delegate methods if needed
 
 ```swift
@@ -131,7 +133,7 @@ func didSelectButton(at index: Int)
 func willTransition(to index: Int)
 func didTransition(to index: Int)
 ```
-### Instance methods for LZViewPager
+## Instance methods for LZViewPager
 If you want to locating to some page programming you can call select(index: Int) method
 
 ```swift
