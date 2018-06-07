@@ -1,5 +1,5 @@
 //
-//  LZPageContentView.swift
+//  LZViewPagerContent.swift
 //  
 //
 //  Created by lizhu on 2018/4/12.
@@ -29,6 +29,7 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
     public var delegate: LZViewPagerDelegate?
     public var dataSource: LZViewPagerDataSource?
     public var hostController: UIViewController?
+    var currentIndex: Int? 
     internal var onSelectionChanged: ((_ newIndex: Int) -> ())?
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
@@ -58,8 +59,9 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         if completed {
-            self.onSelectionChanged?((self.pageViewController!.viewControllers![0]).index)
-            self.delegate?.didTransition?(to: (self.pageViewController!.viewControllers![0]).index)
+            self.currentIndex = (self.pageViewController!.viewControllers![0]).index
+            self.onSelectionChanged?(self.currentIndex!)
+            self.delegate?.didTransition?(to: self.currentIndex!)
         }
     }
     
@@ -85,6 +87,7 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
             } else {
                 self.pageViewController?.setViewControllers([controller], direction: .forward, animated: true, completion: nil)
             }
+            self.currentIndex = index
         }
     }
     
@@ -108,6 +111,7 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
         if let first = self.dataSource?.controller(at: 0) {
             self.pageViewController?.setViewControllers([first], direction: .forward, animated: true, completion: nil)
             first.index = 0
+            self.currentIndex = 0
         }
         for view in self.pageViewController?.view.subviews ?? [] {
             if view.isKind(of: UIScrollView.self) {

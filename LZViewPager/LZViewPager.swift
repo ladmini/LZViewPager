@@ -35,6 +35,10 @@ public class LZViewPager : UIView {
     @IBOutlet public var delegate: LZViewPagerDelegate?
     @IBOutlet public var dataSource: LZViewPagerDataSource?
     public var hostController: UIViewController?
+    // If there are no datasource then the currentIndex will return nil
+    public var currentIndex: Int? {
+        return self.contentView.currentIndex
+    }
 
     private lazy var headerView: LZViewPagerHeader = {
         let header = LZViewPagerHeader()

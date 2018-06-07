@@ -44,7 +44,18 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
         viewPager.hostController = self
         viewPager.reload()
     }
+    
+    func willTransition(to index: Int) {
+        print("Current index before transition: \(viewPager.currentIndex ?? -1)")
+    }
+    
+    func didTransition(to index: Int) {
+        print("Current index after transition: \(viewPager.currentIndex ?? -1)")
+    }
 
-
+    func didSelectButton(at index: Int) {
+        print("Current index before transition: \(viewPager.currentIndex ?? -1)")
+        print("Current index after transition: \(index)")
+    }
 }
 

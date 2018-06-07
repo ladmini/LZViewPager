@@ -1,5 +1,5 @@
 //
-//  LZPageHeaderView.swift
+//  LZViewPagerHeader.swift
 //  
 //
 //  Created by lizhu on 2018/4/12.
