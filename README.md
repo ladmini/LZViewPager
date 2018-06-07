@@ -50,6 +50,12 @@ Since this project depends on SnapKit(A Swift Autolayout DSL for iOS & OS X). Yo
 github "SnapKit/SnapKit" ~> 4.0.0
 github "ladmini/LZViewPager" ~> 0.6.0
 ```
+### Manually
+If you prefer not to use either of the aforementioned dependency managers, you can integrate LZViewPager into your project manually. Just copy the following 3 files into your project.
+
+1) LZViewPager.swift
+2) LZViewPagerHeader.swift
+3) LZViewPagerContent.swift
 
 ## 🚀 Usage
 
