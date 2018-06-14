@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSource {
+class ViewController1: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSource {
     
     @IBOutlet weak var viewPager: LZViewPager!
     private var subControllers:[UIViewController] = []
@@ -23,15 +23,16 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
     
     func button(at index: Int) -> UIButton {
         let button = UIButton()
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        button.setTitleColor(UIColor.black, for: .selected)
-        button.setTitleColor(UIColor.black.withAlphaComponent(0.2), for: .normal)
+        let title = self.subControllers[index].title ?? ""
+        let norAttrStr = NSAttributedString(string: title, attributes: [NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)])
+        let selAttrStr = NSAttributedString(string: title, attributes: [NSAttributedStringKey.foregroundColor: UIColor.red, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 22)])
+        button.setAttributedTitle(norAttrStr, for: .normal)
+        button.setAttributedTitle(selAttrStr, for: .selected)
         return button
     }
     
-    func colorForIndicator(at index: Int) -> UIColor {
-//        return UIColor.blue.withAlphaComponent(CGFloat(index) / 4.0)
-        return UIColor.blue
+    func shouldShowIndicator() -> Bool {
+        return false
     }
 
     override func viewDidLoad() {

@@ -20,6 +20,7 @@
 - [x] Simplistic, yet highly extensive customisation.
 - [x] Full support for custom components.
 - [x] Built on a powerful and informative page view controller.
+- [x] Header scrollable, if the width of buttons is larger than the width of the current view.
 
 ## 📋 Requirements
 LZViewPager requires iOS 9, Swift 4
@@ -30,7 +31,7 @@ LZViewPager requires iOS 9, Swift 4
 LZViewPager is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'LZViewPager', '~> 0.6.0'
+pod 'LZViewPager', '~> 0.8.0'
 ```
 
 And run `pod install`.
@@ -48,7 +49,7 @@ Since this project depends on SnapKit(A Swift Autolayout DSL for iOS & OS X). Yo
 
 ```ogdl
 github "SnapKit/SnapKit" ~> 4.0.0
-github "ladmini/LZViewPager" ~> 0.6.0
+github "ladmini/LZViewPager" ~> 0.8.0
 ```
 ### Manually
 If you prefer not to use either of the aforementioned dependency managers, you can integrate LZViewPager into your project manually. Just copy the following 3 files into your project.
@@ -125,9 +126,11 @@ You can customize you button styles in datasource method "func button(at index: 
 
 ```swift
 func heightForHeader() -> CGFloat
+func backgroundColorForHeader() -> UIColor
 func heightForIndicator(at index: Int) -> CGFloat
 func colorForIndicator(at index: Int) -> UIColor
 func shouldShowIndicator() -> Bool
+func widthForButton(at index: Int) -> CGFloat
 ```
 
 
@@ -140,11 +143,21 @@ func willTransition(to index: Int)
 func didTransition(to index: Int)
 ```
 ## Instance methods for LZViewPager
+When your datasource changed you should call reload() method to refresh.
 If you want to locating to some page programming you can call select(index: Int) method
 
 ```swift
+func reload()
 func select(index: Int)
 ```
+
+## Instance property for LZViewPager
+
+```swift
+public var currentIndex: Int?
+```
+
+
 ## How to run this demo
 1) Clone this repository
 2) Execute carthage update

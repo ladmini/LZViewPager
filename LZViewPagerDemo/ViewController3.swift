@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSource {
+class ViewController3: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSource {
     
     @IBOutlet weak var viewPager: LZViewPager!
     private var subControllers:[UIViewController] = []
@@ -47,6 +47,10 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
         subControllers = [vc1, vc2, vc3, vc4]
         viewPager.hostController = self
         viewPager.reload()
+    }
+    
+    func widthForButton(at index: Int) -> CGFloat {
+        return 150
     }
     
     func willTransition(to index: Int) {

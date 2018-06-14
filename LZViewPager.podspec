@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LZViewPager"
-  s.version      = "0.6.0"
+  s.version      = "0.8.0"
   s.summary      = "A powerful paging view with tab bar. "
 
   # This description is used to generate tags and improve search results.

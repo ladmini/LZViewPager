@@ -8,7 +8,20 @@
 
 import UIKit
 
-class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSource {
+extension UIImage {
+    class func imageWithColor(color: UIColor) -> UIImage {
+        let rect: CGRect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 1, height: 1), false, 0)
+        color.setFill()
+        UIRectFill(rect)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return image
+    }
+}
+
+
+class ViewController2: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSource {
     
     @IBOutlet weak var viewPager: LZViewPager!
     private var subControllers:[UIViewController] = []
@@ -24,14 +37,15 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
     func button(at index: Int) -> UIButton {
         let button = UIButton()
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        button.setTitleColor(UIColor.black, for: .selected)
-        button.setTitleColor(UIColor.black.withAlphaComponent(0.2), for: .normal)
+        button.setBackgroundImage(UIImage.imageWithColor(color: UIColor.lightGray), for: .normal)
+        button.setBackgroundImage(UIImage.imageWithColor(color: UIColor.gray), for: .selected)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.setTitleColor(UIColor.white, for: .selected)
         return button
     }
     
-    func colorForIndicator(at index: Int) -> UIColor {
-//        return UIColor.blue.withAlphaComponent(CGFloat(index) / 4.0)
-        return UIColor.blue
+    func shouldShowIndicator() -> Bool {
+        return false
     }
 
     override func viewDidLoad() {

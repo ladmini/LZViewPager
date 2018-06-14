@@ -6,8 +6,8 @@
 //  Copyright © 2018年 AGS. All rights reserved.
 //
 
-import Foundation
-class ContentViewController3: BaseViewController {
+import UIKit
+class ContentViewController3: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()

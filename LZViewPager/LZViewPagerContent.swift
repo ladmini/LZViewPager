@@ -26,11 +26,11 @@ extension UIViewController {
 }
 
 class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
-    public var delegate: LZViewPagerDelegate?
-    public var dataSource: LZViewPagerDataSource?
-    public var hostController: UIViewController?
+    var delegate: LZViewPagerDelegate?
+    var dataSource: LZViewPagerDataSource?
+    var hostController: UIViewController?
     var currentIndex: Int? 
-    internal var onSelectionChanged: ((_ newIndex: Int) -> ())?
+    var onSelectionChanged: ((_ newIndex: Int) -> ())?
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         let controllerCounts = self.dataSource?.numberOfItems() ?? 0
@@ -72,7 +72,7 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
         return pvc
     }()
     
-    internal func scroll(to index: Int) {
+    func scroll(to index: Int) {
         if let controller = self.dataSource?.controller(at: index) {
             controller.index = index
             if let currentIndex = (self.pageViewController?.viewControllers?[0])?.index {
@@ -92,6 +92,9 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
     }
     
     public func reload() {
+        guard let index = self.currentIndex else {
+            return
+        }
         guard let _ = hostController else {
             assertionFailure("You must specify a host controller")
             return
@@ -108,14 +111,14 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
             self.addSubview(pvc.view)
             pvc.didMove(toParentViewController: hostController)
         }
-        if let first = self.dataSource?.controller(at: 0) {
-            self.pageViewController?.setViewControllers([first], direction: .forward, animated: true, completion: nil)
-            first.index = 0
-            self.currentIndex = 0
+        if let first = self.dataSource?.controller(at: index) {
+            self.pageViewController?.setViewControllers([first], direction: .forward, animated: false, completion: nil)
+            first.index = index
         }
         for view in self.pageViewController?.view.subviews ?? [] {
             if view.isKind(of: UIScrollView.self) {
                 (view as! UIScrollView).delaysContentTouches = false
+                (view as! UIScrollView).canCancelContentTouches = true
             }
         }
         self.pageViewController?.view.snp.makeConstraints({ (make) in

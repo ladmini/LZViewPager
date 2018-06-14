@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC05C4CE20D2126900744CE9 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05C4CD20D2126900744CE9 /* UIViewController+Ext.swift */; };
+		AC05C4D220D25BA400744CE9 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05C4CF20D25BA300744CE9 /* ViewController3.swift */; };
+		AC05C4D320D25BA400744CE9 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05C4D020D25BA400744CE9 /* ViewController2.swift */; };
+		AC05C4D420D25BA400744CE9 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05C4D120D25BA400744CE9 /* ViewController1.swift */; };
 		AC2188DE20C660660075DE35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188DD20C660660075DE35 /* AppDelegate.swift */; };
 		AC2188E020C660660075DE35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188DF20C660660075DE35 /* ViewController.swift */; };
 		AC2188E320C660660075DE35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2188E120C660660075DE35 /* Main.storyboard */; };
@@ -44,6 +48,10 @@
 
 /* Begin PBXFileReference section */
 		535C83BC27C6C7FF4D57A521 /* Pods_LZViewPager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZViewPager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC05C4CD20D2126900744CE9 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		AC05C4CF20D25BA300744CE9 /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
+		AC05C4D020D25BA400744CE9 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		AC05C4D120D25BA400744CE9 /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		AC2188DA20C660660075DE35 /* LZViewPagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZViewPagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2188DD20C660660075DE35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC2188DF20C660660075DE35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,9 +137,13 @@
 			isa = PBXGroup;
 			children = (
 				AC2188FE20C66B3B0075DE35 /* BaseViewController.swift */,
+				AC05C4CD20D2126900744CE9 /* UIViewController+Ext.swift */,
 				AC2188FD20C66AEF0075DE35 /* ContentsController */,
 				AC2188DD20C660660075DE35 /* AppDelegate.swift */,
 				AC2188DF20C660660075DE35 /* ViewController.swift */,
+				AC05C4D120D25BA400744CE9 /* ViewController1.swift */,
+				AC05C4D020D25BA400744CE9 /* ViewController2.swift */,
+				AC05C4CF20D25BA300744CE9 /* ViewController3.swift */,
 				AC2188E120C660660075DE35 /* Main.storyboard */,
 				AC2188E420C660660075DE35 /* Assets.xcassets */,
 				AC2188E620C660660075DE35 /* LaunchScreen.storyboard */,
@@ -301,7 +313,10 @@
 			files = (
 				AC2188E020C660660075DE35 /* ViewController.swift in Sources */,
 				AC2188FC20C669340075DE35 /* LZViewPagerHeader.swift in Sources */,
+				AC05C4D220D25BA400744CE9 /* ViewController3.swift in Sources */,
 				AC21890120C66C5A0075DE35 /* ContentViewController1.swift in Sources */,
+				AC05C4D420D25BA400744CE9 /* ViewController1.swift in Sources */,
+				AC05C4CE20D2126900744CE9 /* UIViewController+Ext.swift in Sources */,
 				AC21890320C66CB50075DE35 /* ContentViewController2.swift in Sources */,
 				AC2188FA20C669340075DE35 /* LZViewPager.swift in Sources */,
 				AC2188FB20C669340075DE35 /* LZViewPagerContent.swift in Sources */,
@@ -309,6 +324,7 @@
 				AC21890720C66CCA0075DE35 /* ContentViewController4.swift in Sources */,
 				AC21890520C66CBF0075DE35 /* ContentViewController3.swift in Sources */,
 				AC2188FF20C66B3B0075DE35 /* BaseViewController.swift in Sources */,
+				AC05C4D320D25BA400744CE9 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

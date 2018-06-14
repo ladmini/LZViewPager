@@ -10,10 +10,6 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
-    static func createFromNib<T: BaseViewController>(storyBoardId: String) -> T?{
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: storyBoardId) as? T
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
