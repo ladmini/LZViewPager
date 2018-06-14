@@ -85,13 +85,13 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
         viewPager.dataSource = self
         viewPager.delegate = self
         viewPager.hostController = self
-        let vc1 = BaseViewController.createFromNib(storyBoardId: "ContentViewController1") as! ContentViewController1
+        let vc1 = UIViewController.createFromNib(storyBoardId: "ContentViewController1")!
         vc1.title = "Title1"
-        let vc2 = BaseViewController.createFromNib(storyBoardId: "ContentViewController2") as! ContentViewController2
+        let vc2 = UIViewController.createFromNib(storyBoardId: "ContentViewController2")!
         vc2.title = "Title2"
-        let vc3 = BaseViewController.createFromNib(storyBoardId: "ContentViewController3") as! ContentViewController3
+        let vc3 = UIViewController.createFromNib(storyBoardId: "ContentViewController3")!
         vc3.title = "Title3"
-        let vc4 = BaseViewController.createFromNib(storyBoardId: "ContentViewController4") as! ContentViewController4
+        let vc4 = UIViewController.createFromNib(storyBoardId: "ContentViewController4")!
         vc4.title = "Title4"
         subControllers = [vc1, vc2, vc3, vc4]
         viewPager.reload()
