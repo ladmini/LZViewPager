@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-    <img src="webimages/screenshot.png" width="300" alt=""/>
+    <img src="webimages/demo.gif"  alt=""/>
 </p>
  
 ## ⭐️ Features
