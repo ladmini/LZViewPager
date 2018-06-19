@@ -31,6 +31,8 @@
 		ACAAC25B20C7AC130050C6FE /* LZViewPagerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188F920C669340075DE35 /* LZViewPagerHeader.swift */; };
 		ACAAC26520C7DF5F0050C6FE /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACAAC25F20C7D8D60050C6FE /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACAAC27120C7DFAA0050C6FE /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACAAC26E20C7DF9A0050C6FE /* SnapKit.framework */; };
+		ACE4175F20D8ADE8004AA14B /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4175E20D8ADE8004AA14B /* ImageButton.swift */; };
+		ACE4176120D8B053004AA14B /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4176020D8B053004AA14B /* ViewController5.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -82,6 +84,8 @@
 		ACAAC26E20C7DF9A0050C6FE /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
 		ACAAC26F20C7DF9A0050C6FE /* 76A4EC05-ECEB-32F4-98EB-F231510E7C01.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "76A4EC05-ECEB-32F4-98EB-F231510E7C01.bcsymbolmap"; sourceTree = "<group>"; };
 		ACAAC27020C7DF9A0050C6FE /* LZViewPager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LZViewPager.framework; sourceTree = "<group>"; };
+		ACE4175E20D8ADE8004AA14B /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		ACE4176020D8B053004AA14B /* ViewController5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
 		EA4039B533C81255F7B522AE /* Pods_LZViewPagerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZViewPagerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,10 +151,12 @@
 				AC05C4D020D25BA400744CE9 /* ViewController2.swift */,
 				AC05C4CF20D25BA300744CE9 /* ViewController3.swift */,
 				AC05C4D520D2AD1400744CE9 /* ViewController4.swift */,
+				ACE4176020D8B053004AA14B /* ViewController5.swift */,
 				AC2188E120C660660075DE35 /* Main.storyboard */,
 				AC2188E420C660660075DE35 /* Assets.xcassets */,
 				AC2188E620C660660075DE35 /* LaunchScreen.storyboard */,
 				AC2188E920C660660075DE35 /* Info.plist */,
+				ACE4175E20D8ADE8004AA14B /* ImageButton.swift */,
 			);
 			path = LZViewPagerDemo;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC2188E020C660660075DE35 /* ViewController.swift in Sources */,
+				ACE4176120D8B053004AA14B /* ViewController5.swift in Sources */,
 				AC2188FC20C669340075DE35 /* LZViewPagerHeader.swift in Sources */,
 				AC05C4D220D25BA400744CE9 /* ViewController3.swift in Sources */,
 				AC21890120C66C5A0075DE35 /* ContentViewController1.swift in Sources */,
@@ -325,6 +332,7 @@
 				AC2188FA20C669340075DE35 /* LZViewPager.swift in Sources */,
 				AC2188FB20C669340075DE35 /* LZViewPagerContent.swift in Sources */,
 				AC2188DE20C660660075DE35 /* AppDelegate.swift in Sources */,
+				ACE4175F20D8ADE8004AA14B /* ImageButton.swift in Sources */,
 				AC21890720C66CCA0075DE35 /* ContentViewController4.swift in Sources */,
 				AC21890520C66CBF0075DE35 /* ContentViewController3.swift in Sources */,
 				AC2188FF20C66B3B0075DE35 /* BaseViewController.swift in Sources */,
