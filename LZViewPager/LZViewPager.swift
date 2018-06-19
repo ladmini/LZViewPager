@@ -9,11 +9,11 @@
 import UIKit
 import SnapKit
 
-//@objc public enum ButtonsAlignment: Int {
-//    case left
-//    case center
-//    case right
-//}
+@objc public enum ButtonsAlignment: Int {
+    case left
+    case center
+    case right
+}
 
 class LZConstants {
     static let defaultIndicatorColor = UIColor(red: 255.0/255.0, green: 36.0/255.0, blue: 79.0/255.0, alpha: 1.0)
@@ -29,7 +29,7 @@ class LZConstants {
     @objc optional func colorForIndicator(at index: Int) -> UIColor
     @objc optional func shouldShowIndicator() -> Bool
     @objc optional func widthForButton(at index: Int) -> CGFloat
-//    @objc optional func buttonsAligment() -> ButtonsAlignment
+    @objc optional func buttonsAligment() -> ButtonsAlignment
     func numberOfItems() -> Int
     func controller(at index: Int) -> UIViewController
     func button(at index: Int) -> UIButton

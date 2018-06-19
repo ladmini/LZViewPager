@@ -70,6 +70,6 @@ class ViewController5: BaseViewController, LZViewPagerDelegate, LZViewPagerDataS
         print("Current index before transition: \(viewPager.currentIndex ?? -1)")
         print("Current index after transition: \(index)")
     }
-
+    
 }
 

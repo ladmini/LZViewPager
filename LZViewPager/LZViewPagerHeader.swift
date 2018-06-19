@@ -30,7 +30,13 @@ class LZViewPagerHeader: UIScrollView {
     var onSelectionChanged: ((_ newIndex: Int) -> ())?
     var currentIndex: Int?
 
-    private var containerView: UIView = {
+    private lazy var containerView: UIView = {
+        let v = UIView(frame: CGRect.zero)
+        v.backgroundColor = UIColor.clear
+        return v
+    }()
+    
+    private lazy var contentView: UIView = {
         let v = UIView(frame: CGRect.zero)
         v.backgroundColor = UIColor.clear
         return v
@@ -85,13 +91,13 @@ class LZViewPagerHeader: UIScrollView {
         return offest
     }
 
-//    private var buttonsAlignment: ButtonsAlignment {
-//        if let aligment = self.dataSource?.buttonsAligment?() {
-//            return aligment
-//        } else {
-//            return .left
-//        }
-//    }
+    private var buttonsAlignment: ButtonsAlignment {
+        if let aligment = self.dataSource?.buttonsAligment?() {
+            return aligment
+        } else {
+            return .left
+        }
+    }
     
     @objc internal func buttonAction(sender: UIButton) {
         self.move(to: sender.index)
@@ -100,7 +106,7 @@ class LZViewPagerHeader: UIScrollView {
     }
     
     func move(to index: Int) {
-        for view in self.containerView.subviews {
+        for view in self.contentView.subviews {
             if view.isKind(of: UIButton.self) {
                 let button = view as! UIButton
                 if button.index == index {
@@ -119,7 +125,7 @@ class LZViewPagerHeader: UIScrollView {
     
     private func makeButtonCenteredIfNeeded(at index: Int, animated: Bool = true) {
         var targetButton: UIButton? = nil
-        for view in self.containerView.subviews {
+        for view in self.contentView.subviews {
             if view.isKind(of: UIButton.self) {
                 let button = view as! UIButton
                 if button.index == index {
@@ -129,7 +135,7 @@ class LZViewPagerHeader: UIScrollView {
         }
         guard let button = targetButton else { return }
         guard let _ = button.superview else { return }
-        let rect = self.containerView.convert(button.frame, to: self)
+        let rect = self.contentView.convert(button.frame, to: self)
         self.scrollRectToVisibleCentered(rect, animated: animated)
     }
     
@@ -146,21 +152,28 @@ class LZViewPagerHeader: UIScrollView {
         self.addSubview(self.containerView)
         self.containerView.snp.makeConstraints {[weak self] (make) in
             guard let s = self else { return }
-            make.width.equalTo(s.buttonsWidth)
+            make.width.equalTo(max(s.buttonsWidth, s.bounds.size.width))
             make.height.equalTo(s.bounds.size.height)
-            make.edges.equalToSuperview().priority(1000)
-//            if s.buttonsAlignment == .left {
-//                make.leading.equalToSuperview().priority(1000)
-//            } else if s.buttonsAlignment == .center {
-//                make.center.equalToSuperview().priority(1000)
-//            } else if s.buttonsAlignment == .right {
-//                make.trailing.equalToSuperview().priority(1000)
-//            }
+            make.edges.equalToSuperview()
+        }
+        self.containerView.addSubview(self.contentView)
+        self.contentView.snp.makeConstraints {[weak self] (make) in
+            guard let s = self else { return }
+            if s.buttonsAlignment == .left {
+                make.leading.equalToSuperview()
+            } else if s.buttonsAlignment == .center {
+                make.center.equalToSuperview()
+            } else if s.buttonsAlignment == .right {
+                make.trailing.equalToSuperview()
+            }
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.width.equalTo(s.buttonsWidth)
         }
         for i in 0..<buttonsCount {
             if let button = self.dataSource?.button(at: i) {
                 button.index = i
-                self.containerView.addSubview(button)
+                self.contentView.addSubview(button)
                 button.snp.makeConstraints({[weak self] (make) in
                     guard let s = self else { return }
                     make.top.equalToSuperview()
@@ -192,7 +205,7 @@ class LZViewPagerHeader: UIScrollView {
     private func setUpIndicator() {
         guard let index = self.currentIndex else { return }
         self.indicatorView.backgroundColor = self.dataSource?.colorForIndicator?(at: 0) ?? LZConstants.defaultIndicatorColor
-        self.containerView.addSubview(self.indicatorView)
+        self.contentView.addSubview(self.indicatorView)
         self.indicatorView.snp.makeConstraints {[weak self] (make) in
             guard let s = self else { return }
             make.leading.equalToSuperview().offset(s.xLeading(for: index))
