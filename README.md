@@ -39,15 +39,15 @@ pod 'LZViewPager', '~> 1.0.1'
 
 And run `pod install`.
 
-* If your pod install doesn't work properly, maybe your pod repository needs to be updated. You can try
+**If your pod install doesn't work properly, maybe your pod repository needs to be updated. You can try**
 ```ruby
 pod repo update
 ```
-and then run
+**and then run**
 ```ruby
 pod install
 ```
-*
+
 
 ### Carthage
 LZViewPager is also available through [Carthage](https://github.com/Carthage/Carthage). Simply install carthage with [Homebrew](http://brew.sh/) using the following command:
