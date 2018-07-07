@@ -51,7 +51,11 @@ class ViewController8: BaseViewController, LZViewPagerDelegate, LZViewPagerDataS
         return .right
     }
     
-    
+    @IBAction func nextPageAction(_ sender: UIBarButtonItem) {
+        guard let currentIndex = viewPager.currentIndex else { return }
+        let nextIndex = currentIndex + 1 > self.numberOfItems() - 1 ? 0 : currentIndex + 1
+        viewPager.select(index: nextIndex)
+    }
     
 }
 

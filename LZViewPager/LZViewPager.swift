@@ -126,7 +126,7 @@ public class LZViewPager : UIView {
             assertionFailure("Index out of range")
             return
         }
-        for v in self.headerView.subviews {
+        for v in self.headerView.subviews[0].subviews[0].subviews {
             if v.isKind(of: UIButton.self) {
                 let button = v as! UIButton
                 if button.index == index {

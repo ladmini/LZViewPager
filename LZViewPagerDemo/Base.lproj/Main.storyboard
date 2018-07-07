@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2wy-NF-O1t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2wy-NF-O1t">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -241,6 +241,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1jB-ty-C9K">
+                        <barButtonItem key="rightBarButtonItem" title="Select Next Page" id="8zs-2x-a06">
+                            <connections>
+                                <action selector="nextPageAction:" destination="BYZ-38-t0r" id="6Zy-9h-FHW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="viewPager" destination="OuC-wj-0nG" id="p9f-la-M9G"/>
                     </connections>
@@ -659,6 +666,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ioa-jp-d8d"/>
                     </view>
+                    <navigationItem key="navigationItem" id="cve-EF-tEe">
+                        <barButtonItem key="rightBarButtonItem" title="Select Next Page" id="yEt-qH-JYe">
+                            <connections>
+                                <action selector="nextPageAction:" destination="4yI-eY-Jue" id="eY0-Al-mJ9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="viewPager" destination="61O-Mu-uBh" id="gM6-Ae-Wfa"/>
                     </connections>
@@ -829,6 +843,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lEU-sa-liB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="C7Y-by-2HN">
+                        <barButtonItem key="rightBarButtonItem" title="Select Next Page" id="g6t-CR-f8e">
+                            <connections>
+                                <action selector="nextPageAction:" destination="qsA-HO-2ce" id="zW3-3O-sYR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="viewPager" destination="hQq-hK-KAC" id="HtO-R1-5O7"/>
                     </connections>

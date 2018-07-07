@@ -65,6 +65,12 @@ class ViewController3: BaseViewController, LZViewPagerDelegate, LZViewPagerDataS
         print("Current index before transition: \(viewPager.currentIndex ?? -1)")
         print("Current index after transition: \(index)")
     }
+    
+    @IBAction func nextPageAction(_ sender: UIBarButtonItem) {
+        guard let currentIndex = viewPager.currentIndex else { return }
+        let nextIndex = currentIndex + 1 > self.numberOfItems() - 1 ? 0 : currentIndex + 1
+        viewPager.select(index: nextIndex)
+    }
 
 }
 
