@@ -1,4 +1,4 @@
-
+<p align="center"><img src="webimages/logotype.png"<center></p>
 <p align="center">
     <a href="https://github.com/ladmini/LZViewPager">
         <img src="webimages/1.svg" />
