@@ -25,12 +25,41 @@ extension UIViewController {
     }
 }
 
+extension UIPageViewController {
+    var isScrollEnabled: Bool {
+        get {
+            var isEnabled: Bool = true
+            for view in view.subviews {
+                if let subView = view as? UIScrollView {
+                    isEnabled = subView.isScrollEnabled
+                }
+            }
+            return isEnabled
+        }
+        set {
+            for view in view.subviews {
+                if let subView = view as? UIScrollView {
+                    subView.isScrollEnabled = newValue
+                }
+            }
+        }
+    }
+}
+
 class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     var delegate: LZViewPagerDelegate?
     var dataSource: LZViewPagerDataSource?
     var hostController: UIViewController?
     var currentIndex: Int? 
     var onSelectionChanged: ((_ newIndex: Int) -> ())?
+    
+    var shouldEnableSwipeable: Bool {
+        if let e = self.dataSource?.shouldEnableSwipeable?() {
+            return e
+        } else {
+            return true
+        }
+    }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         let controllerCounts = self.dataSource?.numberOfItems() ?? 0
@@ -110,6 +139,7 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
             pvc.willMove(toParentViewController: hostController)
             self.addSubview(pvc.view)
             pvc.didMove(toParentViewController: hostController)
+            pvc.isScrollEnabled = self.shouldEnableSwipeable
         }
         if let first = self.dataSource?.controller(at: index) {
             self.pageViewController?.setViewControllers([first], direction: .forward, animated: false, completion: nil)

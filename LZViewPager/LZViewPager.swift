@@ -23,13 +23,14 @@ class LZConstants {
 }
 
 @objc public protocol LZViewPagerDataSource: AnyObject{
-    @objc optional func heightForHeader() -> CGFloat
-    @objc optional func backgroundColorForHeader() -> UIColor
-    @objc optional func heightForIndicator() -> CGFloat
-    @objc optional func colorForIndicator(at index: Int) -> UIColor
-    @objc optional func shouldShowIndicator() -> Bool
-    @objc optional func widthForButton(at index: Int) -> CGFloat
-    @objc optional func buttonsAligment() -> ButtonsAlignment
+    @objc optional func heightForHeader() -> CGFloat // default is 40
+    @objc optional func backgroundColorForHeader() -> UIColor // default is .white
+    @objc optional func heightForIndicator() -> CGFloat // default is 2.0
+    @objc optional func colorForIndicator(at index: Int) -> UIColor // default is true UIColor(red: 255.0/255.0, green: 36.0/255.0, blue: 79.0/255.0, alpha: 1.0)
+    @objc optional func shouldShowIndicator() -> Bool // default is true
+    @objc optional func widthForButton(at index: Int) -> CGFloat // default is bounds.width / count
+    @objc optional func buttonsAligment() -> ButtonsAlignment // default is .left
+    @objc optional func shouldEnableSwipeable() -> Bool // default is true
     func numberOfItems() -> Int
     func controller(at index: Int) -> UIViewController
     func button(at index: Int) -> UIButton

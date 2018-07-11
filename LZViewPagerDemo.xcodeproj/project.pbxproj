@@ -31,6 +31,7 @@
 		ACAAC25B20C7AC130050C6FE /* LZViewPagerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188F920C669340075DE35 /* LZViewPagerHeader.swift */; };
 		ACAAC26520C7DF5F0050C6FE /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACAAC25F20C7D8D60050C6FE /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACAAC27120C7DFAA0050C6FE /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACAAC26E20C7DF9A0050C6FE /* SnapKit.framework */; };
+		ACB03C2B20F47B190016B47A /* ViewController9.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB03C2A20F47B190016B47A /* ViewController9.swift */; };
 		ACE4175F20D8ADE8004AA14B /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4175E20D8ADE8004AA14B /* ImageButton.swift */; };
 		ACE4176120D8B053004AA14B /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4176020D8B053004AA14B /* ViewController5.swift */; };
 		ACE4176520D8E349004AA14B /* ViewController7.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4176220D8E349004AA14B /* ViewController7.swift */; };
@@ -87,6 +88,7 @@
 		ACAAC26E20C7DF9A0050C6FE /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
 		ACAAC26F20C7DF9A0050C6FE /* 76A4EC05-ECEB-32F4-98EB-F231510E7C01.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "76A4EC05-ECEB-32F4-98EB-F231510E7C01.bcsymbolmap"; sourceTree = "<group>"; };
 		ACAAC27020C7DF9A0050C6FE /* LZViewPager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LZViewPager.framework; sourceTree = "<group>"; };
+		ACB03C2A20F47B190016B47A /* ViewController9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController9.swift; sourceTree = "<group>"; };
 		ACE4175E20D8ADE8004AA14B /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
 		ACE4176020D8B053004AA14B /* ViewController5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
 		ACE4176220D8E349004AA14B /* ViewController7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController7.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				ACE4176320D8E349004AA14B /* ViewController6.swift */,
 				ACE4176220D8E349004AA14B /* ViewController7.swift */,
 				ACE4176420D8E349004AA14B /* ViewController8.swift */,
+				ACB03C2A20F47B190016B47A /* ViewController9.swift */,
 				AC2188E120C660660075DE35 /* Main.storyboard */,
 				AC2188E420C660660075DE35 /* Assets.xcassets */,
 				AC2188E620C660660075DE35 /* LaunchScreen.storyboard */,
@@ -337,6 +340,7 @@
 				AC05C4D620D2AD1400744CE9 /* ViewController4.swift in Sources */,
 				ACE4176520D8E349004AA14B /* ViewController7.swift in Sources */,
 				ACE4176720D8E349004AA14B /* ViewController8.swift in Sources */,
+				ACB03C2B20F47B190016B47A /* ViewController9.swift in Sources */,
 				AC05C4D420D25BA400744CE9 /* ViewController1.swift in Sources */,
 				AC05C4CE20D2126900744CE9 /* UIViewController+Ext.swift in Sources */,
 				AC21890320C66CB50075DE35 /* ContentViewController2.swift in Sources */,

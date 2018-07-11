@@ -145,6 +145,7 @@ func colorForIndicator(at index: Int) -> UIColor
 func shouldShowIndicator() -> Bool
 func widthForButton(at index: Int) -> CGFloat
 func buttonsAligment() -> ButtonsAlignment
+func shouldEnableSwipeable() -> Bool
 ```
 
 

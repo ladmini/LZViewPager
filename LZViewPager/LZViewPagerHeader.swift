@@ -146,6 +146,12 @@ class LZViewPagerHeader: UIScrollView {
         for view in self.subviews {
             view.removeFromSuperview()
         }
+        for view in self.containerView.subviews {
+            view.removeFromSuperview()
+        }
+        for view in self.contentView.subviews {
+            view.removeFromSuperview()
+        }
         guard let buttonsCount = self.dataSource?.numberOfItems(), buttonsCount > 0 else {
             return
         }
@@ -191,6 +197,8 @@ class LZViewPagerHeader: UIScrollView {
                 button.sizeToFit()
                 if button.index == currentIndex {
                     button.isSelected = true
+                } else {
+                    button.isSelected = false
                 }
             }
         }
@@ -204,7 +212,7 @@ class LZViewPagerHeader: UIScrollView {
     
     private func setUpIndicator() {
         guard let index = self.currentIndex else { return }
-        self.indicatorView.backgroundColor = self.dataSource?.colorForIndicator?(at: 0) ?? LZConstants.defaultIndicatorColor
+        self.indicatorView.backgroundColor = self.dataSource?.colorForIndicator?(at: index) ?? LZConstants.defaultIndicatorColor
         self.contentView.addSubview(self.indicatorView)
         self.indicatorView.snp.makeConstraints {[weak self] (make) in
             guard let s = self else { return }
@@ -217,7 +225,7 @@ class LZViewPagerHeader: UIScrollView {
     
     
     private func moveIndicator(to index: Int) {
-        self.indicatorView.snp.updateConstraints {[weak self] (make) in
+        self.indicatorView.snp.remakeConstraints {[weak self] (make) in
             guard let s = self else { return }
             make.leading.equalToSuperview().offset(s.xLeading(for: index))
             make.width.equalTo(s.buttonWidth(at: index))
@@ -226,7 +234,7 @@ class LZViewPagerHeader: UIScrollView {
         }
         UIView.animate(withDuration: 0.3, animations: {
             self.indicatorView.backgroundColor = self.dataSource?.colorForIndicator?(at: index) ?? LZConstants.defaultIndicatorColor
-            self.containerView.layoutIfNeeded()
+            self.contentView.layoutIfNeeded()
         }, completion: nil)
     }
     
