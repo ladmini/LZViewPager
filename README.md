@@ -184,6 +184,7 @@ If you are encountering issues with LZViewPager, please raise an [issue](https:/
 ## 👨🏻‍💻 About
 - Created by [Ladmini](https://github.com/ladmini) ([Mail to ladmini](mailto:ladmini@126.com))
 - Contributed to by a growing [list of others](https://github.com/ladmini/LZViewPager/graphs/contributors).
+- Logo was designed by **Tobaloidee**.
 
 
 ## ❤️ Contributing
@@ -191,4 +192,3 @@ Bug reports and pull requests are welcome on GitHub at [https://github.com/ladmi
 
 ## 👮🏻‍♂️ License
 The library is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-Logo was designed by @Tobaloidee.
