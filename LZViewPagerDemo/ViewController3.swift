@@ -50,7 +50,11 @@ class ViewController3: BaseViewController, LZViewPagerDelegate, LZViewPagerDataS
     }
     
     func widthForButton(at index: Int) -> CGFloat {
-        return 150
+        return 120
+    }
+    
+    func widthForIndicator(at index: Int) -> CGFloat {
+        return 30
     }
     
     func willTransition(to index: Int) {

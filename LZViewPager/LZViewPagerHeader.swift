@@ -83,7 +83,10 @@ class LZViewPagerHeader: UIScrollView {
         }
     }
     
-    private func xLeading(for index: Int) -> CGFloat {
+    private func buttonXLeading(for index: Int) -> CGFloat {
+        if index < 0 {
+            return 0
+        }
         var offest: CGFloat = 0
         for i in 0..<index {
             offest += self.buttonWidth(at: i)
@@ -96,6 +99,35 @@ class LZViewPagerHeader: UIScrollView {
             return aligment
         } else {
             return .left
+        }
+    }
+    
+    private func indicatorWidth(at index: Int) -> CGFloat {
+        guard let buttonsCount = self.dataSource?.numberOfItems(), buttonsCount > 0 else {
+            return 0
+        }
+        if let _ = self.dataSource?.widthForIndicator?(at: 0) {
+            return self.dataSource!.widthForIndicator!(at: index)
+        } else {
+            return self.buttonWidth(at: index)
+        }
+    }
+    
+    private func indicatorXLeading(for index: Int) -> CGFloat {
+        if index < 0 {
+            return 0
+        }
+        if let _ = self.dataSource?.widthForIndicator?(at: 0) {
+            let leading = buttonXLeading(for: index)
+            let buttonWidth = self.buttonWidth(at: index)
+            let indicatorWidth = self.dataSource!.widthForIndicator!(at: index)
+            if buttonWidth > indicatorWidth {
+                return leading + (buttonWidth - indicatorWidth) * 0.5
+            } else {
+                return leading
+            }
+        } else {
+            return self.buttonXLeading(for: index)
         }
     }
     
@@ -187,7 +219,7 @@ class LZViewPagerHeader: UIScrollView {
                 button.snp.makeConstraints({[weak self] (make) in
                     guard let s = self else { return }
                     make.top.equalToSuperview()
-                    make.leading.equalToSuperview().offset(s.xLeading(for: i))
+                    make.leading.equalToSuperview().offset(s.buttonXLeading(for: i))
                     make.width.equalTo(s.buttonWidth(at: i))
                     make.bottom.equalToSuperview().offset(-s.indicatorHeight)
                 })
@@ -220,8 +252,8 @@ class LZViewPagerHeader: UIScrollView {
         self.contentView.addSubview(self.indicatorView)
         self.indicatorView.snp.makeConstraints {[weak self] (make) in
             guard let s = self else { return }
-            make.leading.equalToSuperview().offset(s.xLeading(for: index))
-            make.width.equalTo(s.buttonWidth(at: index))
+            make.leading.equalToSuperview().offset(s.indicatorXLeading(for: index))
+            make.width.equalTo(s.indicatorWidth(at: index))
             make.bottom.equalToSuperview()
             make.height.equalTo(s.indicatorHeight)
         }
@@ -231,8 +263,8 @@ class LZViewPagerHeader: UIScrollView {
     private func moveIndicator(to index: Int, animated: Bool = true) {
         self.indicatorView.snp.remakeConstraints {[weak self] (make) in
             guard let s = self else { return }
-            make.leading.equalToSuperview().offset(s.xLeading(for: index))
-            make.width.equalTo(s.buttonWidth(at: index))
+            make.leading.equalToSuperview().offset(s.indicatorXLeading(for: index))
+            make.width.equalTo(s.indicatorWidth(at: index))
             make.bottom.equalToSuperview()
             make.height.equalTo(s.indicatorHeight)
         }

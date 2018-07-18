@@ -51,7 +51,9 @@ class ViewController7: BaseViewController, LZViewPagerDelegate, LZViewPagerDataS
         return .center
     }
     
-    
+    func widthForIndicator(at index: Int) -> CGFloat {
+        return 30
+    }
     
 }
 
