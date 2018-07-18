@@ -159,11 +159,11 @@ func didTransition(to index: Int)
 ```
 ## Instance methods for LZViewPager
 When your datasource changed you should call reload() method to refresh.
-If you want to locating to some page programming you can call select(index: Int) method
+If you want to locating to some page programming you can call select(index: Int, animated: Bool) method, It is important to note that animated is an optional parameter in order to be compatible with the previous versions. If you do not specify animated, it is true by default. 
 
 ```swift
 func reload()
-func select(index: Int)
+public func select(index: Int, animated: Bool = true)
 ```
 
 ## Instance property for LZViewPager
@@ -191,3 +191,4 @@ Bug reports and pull requests are welcome on GitHub at [https://github.com/ladmi
 
 ## 👮🏻‍♂️ License
 The library is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+Logo was designed by @Tobaloidee.

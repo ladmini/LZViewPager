@@ -74,8 +74,8 @@ public class LZViewPager : UIView {
         header.pagerDelegate = self.delegate
         header.dataSource = self.dataSource
         header.currentIndex = self.defaultPageIndex
-        header.onSelectionChanged = {[weak self] (newIndex: Int) in
-            self?.contentView.scroll(to: newIndex)
+        header.onSelectionChanged = {[weak self] (newIndex: Int, animated: Bool) in
+            self?.contentView.scroll(to: newIndex, animated: animated)
         }
         header.backgroundColor = self.dataSource?.backgroundColorForHeader?() ?? LZConstants.defaultHeaderBackgroundColor
         return header
@@ -122,20 +122,12 @@ public class LZViewPager : UIView {
         self.contentView.reload()
     }
     
-    public func select(index: Int) {
+    public func select(index: Int, animated: Bool = true) {
         guard let itemsCount = self.dataSource?.numberOfItems(), index < itemsCount else {
             assertionFailure("Index out of range")
             return
         }
-        for v in self.headerView.subviews[0].subviews[0].subviews {
-            if v.isKind(of: UIButton.self) {
-                let button = v as! UIButton
-                if button.index == index {
-                    headerView.buttonAction(sender: button)
-                    break
-                }
-            }
-        }
+        headerView.selectPage(at: index, animated: animated)
     }
     
 }

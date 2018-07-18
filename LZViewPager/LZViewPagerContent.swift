@@ -101,7 +101,7 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
         return pvc
     }()
     
-    func scroll(to index: Int) {
+    func scroll(to index: Int, animated: Bool = true) {
         if let controller = self.dataSource?.controller(at: index) {
             controller.index = index
             if let currentIndex = (self.pageViewController?.viewControllers?[0])?.index {
@@ -109,12 +109,12 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
                     return
                 }
                 else if index > currentIndex {
-                    self.pageViewController?.setViewControllers([controller], direction: .forward, animated: true, completion: nil)
+                    self.pageViewController?.setViewControllers([controller], direction: .forward, animated: animated, completion: nil)
                 } else {
-                    self.pageViewController?.setViewControllers([controller], direction: .reverse, animated: true, completion: nil)
+                    self.pageViewController?.setViewControllers([controller], direction: .reverse, animated: animated, completion: nil)
                 }
             } else {
-                self.pageViewController?.setViewControllers([controller], direction: .forward, animated: true, completion: nil)
+                self.pageViewController?.setViewControllers([controller], direction: .forward, animated: animated, completion: nil)
             }
             self.currentIndex = index
         }

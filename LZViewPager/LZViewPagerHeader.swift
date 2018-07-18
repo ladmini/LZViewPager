@@ -27,7 +27,7 @@ extension UIButton {
 class LZViewPagerHeader: UIScrollView {
     var pagerDelegate: LZViewPagerDelegate?
     var dataSource: LZViewPagerDataSource?
-    var onSelectionChanged: ((_ newIndex: Int) -> ())?
+    var onSelectionChanged: ((_ newIndex: Int, _ animated: Bool) -> ())?
     var currentIndex: Int?
 
     private lazy var containerView: UIView = {
@@ -100,12 +100,16 @@ class LZViewPagerHeader: UIScrollView {
     }
     
     @objc internal func buttonAction(sender: UIButton) {
-        self.move(to: sender.index)
-        self.pagerDelegate?.didSelectButton?(at: sender.index)
-        self.onSelectionChanged?(sender.index)
+        self.selectPage(at: sender.index)
     }
     
-    func move(to index: Int) {
+    func selectPage(at index: Int, animated: Bool = true) {
+        self.move(to: index, animated: animated)
+        self.pagerDelegate?.didSelectButton?(at: index)
+        self.onSelectionChanged?(index, animated)
+    }
+    
+    func move(to index: Int, animated: Bool = true) {
         for view in self.contentView.subviews {
             if view.isKind(of: UIButton.self) {
                 let button = view as! UIButton
@@ -117,10 +121,10 @@ class LZViewPagerHeader: UIScrollView {
             }
         }
         if self.indicatorHeight > 0 {
-            self.moveIndicator(to: index)
+            self.moveIndicator(to: index, animated: animated)
         }
         self.currentIndex = index
-        self.makeButtonCenteredIfNeeded(at: index)
+        self.makeButtonCenteredIfNeeded(at: index, animated: animated)
     }
     
     private func makeButtonCenteredIfNeeded(at index: Int, animated: Bool = true) {
@@ -224,7 +228,7 @@ class LZViewPagerHeader: UIScrollView {
     }
     
     
-    private func moveIndicator(to index: Int) {
+    private func moveIndicator(to index: Int, animated: Bool = true) {
         self.indicatorView.snp.remakeConstraints {[weak self] (make) in
             guard let s = self else { return }
             make.leading.equalToSuperview().offset(s.xLeading(for: index))
@@ -232,10 +236,16 @@ class LZViewPagerHeader: UIScrollView {
             make.bottom.equalToSuperview()
             make.height.equalTo(s.indicatorHeight)
         }
-        UIView.animate(withDuration: 0.3, animations: {
+        if animated {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.indicatorView.backgroundColor = self.dataSource?.colorForIndicator?(at: index) ?? LZConstants.defaultIndicatorColor
+                self.contentView.layoutIfNeeded()
+            }, completion: nil)
+        } else {
             self.indicatorView.backgroundColor = self.dataSource?.colorForIndicator?(at: index) ?? LZConstants.defaultIndicatorColor
             self.contentView.layoutIfNeeded()
-        }, completion: nil)
+        }
+        
     }
     
     private func scrollRectToVisibleCentered(_ rect: CGRect, animated: Bool) {
