@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LZViewPager"
-  s.version      = "1.0.4"
+  s.version      = "1.1.0"
   s.summary      = "A powerful paging view with tab bar. "
 
   # This description is used to generate tags and improve search results.
@@ -137,6 +137,6 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "SnapKit", "~> 4.0.0"
   
-  s.swift_version = "4.0"
+  s.swift_version = "4.2.1"
 
 end

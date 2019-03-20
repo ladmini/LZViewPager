@@ -9,17 +9,17 @@
 import UIKit
 
 extension UIButton {
-    private struct RuntimeKey {
+    private struct LZRuntimeKey {
         static let indexKey = UnsafeRawPointer.init(bitPattern: "indexKey".hashValue)
     }
     
     public var index: Int {
         set {
-            objc_setAssociatedObject(self, RuntimeKey.indexKey!, NSNumber(value: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, LZRuntimeKey.indexKey!, NSNumber(value: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
         
         get {
-            return  (objc_getAssociatedObject(self, RuntimeKey.indexKey!) as! NSNumber).intValue
+            return  (objc_getAssociatedObject(self, LZRuntimeKey.indexKey!) as! NSNumber).intValue
         }
     }
 }

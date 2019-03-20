@@ -10,17 +10,17 @@ import UIKit
 import SnapKit
 
 extension UIViewController {
-    private struct RuntimeKey {
+    private struct LZRuntimeKey {
         static let indexKey = UnsafeRawPointer.init(bitPattern: "indexKey".hashValue)
     }
     
     public var index: Int {
         set {
-            objc_setAssociatedObject(self, RuntimeKey.indexKey!,  NSNumber(value: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, LZRuntimeKey.indexKey!,  NSNumber(value: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
         
         get {
-            return  (objc_getAssociatedObject(self, RuntimeKey.indexKey!) as! NSNumber).intValue
+            return  (objc_getAssociatedObject(self, LZRuntimeKey.indexKey!) as! NSNumber).intValue
         }
     }
 }
@@ -130,15 +130,15 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
         }
         if let pvc = self.pageViewController {
             if let _ = pvc.view.superview {
-                pvc.willMove(toParentViewController: nil)
+                pvc.willMove(toParent: nil)
                 pvc.view.removeFromSuperview()
-                pvc.didMove(toParentViewController: nil)
-                pvc.removeFromParentViewController()
+                pvc.didMove(toParent: nil)
+                pvc.removeFromParent()
             }
-            hostController?.addChildViewController(pvc)
-            pvc.willMove(toParentViewController: hostController)
+            hostController?.addChild(pvc)
+            pvc.willMove(toParent: hostController)
             self.addSubview(pvc.view)
-            pvc.didMove(toParentViewController: hostController)
+            pvc.didMove(toParent: hostController)
             pvc.isScrollEnabled = self.shouldEnableSwipeable
         }
         if let first = self.dataSource?.controller(at: index) {
@@ -155,5 +155,7 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
             make.edges.equalToSuperview()
         })
     }
+    
+    
 
 }

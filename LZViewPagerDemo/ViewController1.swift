@@ -24,8 +24,8 @@ class ViewController1: BaseViewController, LZViewPagerDelegate, LZViewPagerDataS
     func button(at index: Int) -> UIButton {
         let button = UIButton()
         let title = self.subControllers[index].title ?? ""
-        let norAttrStr = NSAttributedString(string: title, attributes: [NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)])
-        let selAttrStr = NSAttributedString(string: title, attributes: [NSAttributedStringKey.foregroundColor: UIColor.red, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 22)])
+        let norAttrStr = NSAttributedString(string: title, attributes: [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)])
+        let selAttrStr = NSAttributedString(string: title, attributes: [NSAttributedString.Key.foregroundColor: UIColor.red, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22)])
         button.setAttributedTitle(norAttrStr, for: .normal)
         button.setAttributedTitle(selAttrStr, for: .selected)
         return button
