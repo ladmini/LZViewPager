@@ -282,9 +282,11 @@
 				TargetAttributes = {
 					AC2188D920C660660075DE35 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1100;
 					};
 					ACAAC24B20C7ABDE0050C6FE = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -520,7 +522,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ags.LZViewPagerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -543,7 +545,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ags.LZViewPagerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -574,7 +576,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ags.LZViewPagerFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -607,7 +609,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ags.LZViewPagerFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
