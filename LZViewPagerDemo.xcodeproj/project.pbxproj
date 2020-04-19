@@ -29,7 +29,6 @@
 		ACAAC25920C7AC130050C6FE /* LZViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188F720C669340075DE35 /* LZViewPager.swift */; };
 		ACAAC25A20C7AC130050C6FE /* LZViewPagerContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188F820C669340075DE35 /* LZViewPagerContent.swift */; };
 		ACAAC25B20C7AC130050C6FE /* LZViewPagerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188F920C669340075DE35 /* LZViewPagerHeader.swift */; };
-		ACAAC26520C7DF5F0050C6FE /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACAAC25F20C7D8D60050C6FE /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACAAC27120C7DFAA0050C6FE /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACAAC26E20C7DF9A0050C6FE /* SnapKit.framework */; };
 		ACB03C2B20F47B190016B47A /* ViewController9.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB03C2A20F47B190016B47A /* ViewController9.swift */; };
 		ACE4175F20D8ADE8004AA14B /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4175E20D8ADE8004AA14B /* ImageButton.swift */; };
@@ -37,16 +36,18 @@
 		ACE4176520D8E349004AA14B /* ViewController7.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4176220D8E349004AA14B /* ViewController7.swift */; };
 		ACE4176620D8E349004AA14B /* ViewController6.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4176320D8E349004AA14B /* ViewController6.swift */; };
 		ACE4176720D8E349004AA14B /* ViewController8.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4176420D8E349004AA14B /* ViewController8.swift */; };
+		ACF21C3E244C51E900EA9213 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACAAC25F20C7D8D60050C6FE /* SnapKit.framework */; };
+		ACF21C3F244C51E900EA9213 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACAAC25F20C7D8D60050C6FE /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		ACAAC26620C7DF600050C6FE /* Embed Frameworks */ = {
+		ACF21C40244C51E900EA9213 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ACAAC26520C7DF5F0050C6FE /* SnapKit.framework in Embed Frameworks */,
+				ACF21C3F244C51E900EA9213 /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF21C3E244C51E900EA9213 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +243,7 @@
 				AC2188D620C660660075DE35 /* Sources */,
 				AC2188D720C660660075DE35 /* Frameworks */,
 				AC2188D820C660660075DE35 /* Resources */,
-				ACAAC26620C7DF600050C6FE /* Embed Frameworks */,
+				ACF21C40244C51E900EA9213 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -513,14 +515,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = LZViewPagerDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ags.LZViewPagerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -536,14 +538,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = LZViewPagerDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ags.LZViewPagerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

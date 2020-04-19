@@ -19,7 +19,7 @@
 </p>
  
 ## ⭐️ Features
-- [x] Support Swift 4.2.1.
+- [x] Support Swift 5.
 - [x] Super easy to implement page view controller with indicator bar.
 - [x] Simplistic, yet highly extensive customisation.
 - [x] Full support for custom components.
@@ -27,7 +27,7 @@
 - [x] Header scrollable, if the width of buttons is larger than the width of the current view.
 
 ## 📋 Requirements
-LZViewPager requires iOS 9, Swift 4
+LZViewPager requires iOS 10, Swift 5
 
 
 ## 📲 Installation
@@ -35,7 +35,7 @@ LZViewPager requires iOS 9, Swift 4
 LZViewPager is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'LZViewPager', '~> 1.1.0'
+pod 'LZViewPager', '~> 1.2.1'
 ```
 
 And run `pod install`.
@@ -62,8 +62,8 @@ $ brew install carthage
 Since this project depends on SnapKit(A Swift Autolayout DSL for iOS & OS X). You can add LZViewPager to your `Cartfile` like this:
 
 ```ogdl
-github "SnapKit/SnapKit" ~> 4.2.0
-github "ladmini/LZViewPager" ~> 1.1.0
+github "SnapKit/SnapKit" ~> 5.0.0
+github "ladmini/LZViewPager" ~> 1.2.1
 ```
 ### Manually
 If you prefer not to use either of the aforementioned dependency managers, you can integrate LZViewPager into your project manually. Just copy the following 3 files into your project.
