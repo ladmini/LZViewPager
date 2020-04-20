@@ -67,6 +67,38 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
         let nextIndex = currentIndex + 1 > self.numberOfItems() - 1 ? 0 : currentIndex + 1
         viewPager.select(index: nextIndex, animated: true)
     }
-
+    
+//    func backgroundColorForHeader() -> UIColor {
+//        return .clear
+//    }
+//
+//    func leftMarginForHeader() -> CGFloat {
+//        return 10
+//    }
+//
+//    func rightMarginForHeader() -> CGFloat {
+//        return 10
+//    }
+//
+//    func shouldShowSeparator() -> Bool {
+//        return true
+//    }
+//
+//    func colorForSeparator() -> UIColor {
+//        return .black
+//    }
+//
+//    func leftMarginForSeparator() -> CGFloat {
+//        return 5
+//    }
+//
+//    func rightMarginForSeparator() -> CGFloat {
+//        return 30
+//    }
+//
+//    func topMarginForSeparator() -> CGFloat {
+//        return -2.0
+//    }
+    
 }
 

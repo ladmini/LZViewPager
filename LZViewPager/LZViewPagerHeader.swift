@@ -179,18 +179,23 @@ class LZViewPagerHeader: UIScrollView {
         if self.bounds.size.width == 0 {
             return
         }
+        
         for view in self.subviews {
             view.removeFromSuperview()
         }
+        
         for view in self.containerView.subviews {
             view.removeFromSuperview()
         }
+        
         for view in self.contentView.subviews {
             view.removeFromSuperview()
         }
+
         guard let buttonsCount = self.dataSource?.numberOfItems(), buttonsCount > 0 else {
             return
         }
+    
         self.addSubview(self.containerView)
         self.containerView.snp.makeConstraints {[weak self] (make) in
             guard let s = self else { return }
