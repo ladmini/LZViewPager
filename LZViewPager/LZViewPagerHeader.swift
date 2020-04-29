@@ -197,14 +197,25 @@ class LZViewPagerHeader: UIScrollView {
         }
     
         self.addSubview(self.containerView)
-        self.containerView.snp.makeConstraints {[weak self] (make) in
+        self.containerView.snp.remakeConstraints {[weak self] (make) in
             guard let s = self else { return }
             make.width.equalTo(max(s.buttonsWidth, s.bounds.size.width))
             make.height.equalTo(s.bounds.size.height)
-            make.edges.equalToSuperview()
+            if s.buttonsWidth > s.bounds.size.width {
+                make.edges.equalToSuperview()
+            } else {
+                make.centerY.equalToSuperview()
+                if s.buttonsAlignment == .left {
+                    make.leading.equalToSuperview()
+                } else if s.buttonsAlignment == .center {
+                    make.center.equalToSuperview()
+                } else if s.buttonsAlignment == .right {
+                    make.leading.equalToSuperview()
+                }
+            }
         }
         self.containerView.addSubview(self.contentView)
-        self.contentView.snp.makeConstraints {[weak self] (make) in
+        self.contentView.snp.remakeConstraints {[weak self] (make) in
             guard let s = self else { return }
             if s.buttonsAlignment == .left {
                 make.leading.equalToSuperview()
@@ -221,7 +232,7 @@ class LZViewPagerHeader: UIScrollView {
             if let button = self.dataSource?.button(at: i) {
                 button.index = i
                 self.contentView.addSubview(button)
-                button.snp.makeConstraints({[weak self] (make) in
+                button.snp.remakeConstraints({[weak self] (make) in
                     guard let s = self else { return }
                     make.top.equalToSuperview()
                     make.leading.equalToSuperview().offset(s.buttonXLeading(for: i))
@@ -255,7 +266,7 @@ class LZViewPagerHeader: UIScrollView {
         guard let index = self.currentIndex else { return }
         self.indicatorView.backgroundColor = self.dataSource?.colorForIndicator?(at: index) ?? LZConstants.defaultIndicatorColor
         self.contentView.addSubview(self.indicatorView)
-        self.indicatorView.snp.makeConstraints {[weak self] (make) in
+        self.indicatorView.snp.remakeConstraints {[weak self] (make) in
             guard let s = self else { return }
             make.leading.equalToSuperview().offset(s.indicatorXLeading(for: index))
             make.width.equalTo(s.indicatorWidth(at: index))

@@ -151,7 +151,7 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
                 (view as! UIScrollView).canCancelContentTouches = true
             }
         }
-        self.pageViewController?.view.snp.makeConstraints({ (make) in
+        self.pageViewController?.view.snp.remakeConstraints({ (make) in
             make.edges.equalToSuperview()
         })
     }

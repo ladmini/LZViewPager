@@ -144,7 +144,7 @@ public class LZViewPager : UIView {
         self.addSubview(headerView)
         self.addSubview(contentView)
         let headerHeight = dataSource?.heightForHeader?() ?? LZConstants.defaultHeaderHight
-        headerView.snp.makeConstraints { (make) in
+        headerView.snp.remakeConstraints { (make) in
             make.leading.equalToSuperview().offset(headerLeading)
             make.trailing.equalToSuperview().offset(0 - headerTrailing)
             make.height.equalTo(headerHeight)
@@ -153,7 +153,7 @@ public class LZViewPager : UIView {
         
         if let showSeparator = self.dataSource?.shouldShowSeparator?(), showSeparator {
             self.addSubview(separatorView)
-            separatorView.snp.makeConstraints { (make) in
+            separatorView.snp.remakeConstraints { (make) in
                 let leading = self.dataSource?.leftMarginForSeparator?() ?? 0
                 let trailing = self.dataSource?.rightMarginForSeparator?() ?? 0
                 let top = self.dataSource?.topMarginForSeparator?() ?? 0
@@ -166,7 +166,7 @@ public class LZViewPager : UIView {
             self.sendSubviewToBack(separatorView)
         }
         
-        contentView.snp.makeConstraints { (make) in
+        contentView.snp.remakeConstraints { (make) in
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
