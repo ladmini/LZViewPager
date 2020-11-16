@@ -141,6 +141,7 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
             pvc.didMove(toParent: hostController)
             pvc.isScrollEnabled = self.shouldEnableSwipeable
         }
+        guard let count = self.dataSource?.numberOfItems(), count > 0 else { return }
         if let first = self.dataSource?.controller(at: index) {
             self.pageViewController?.setViewControllers([first], direction: .forward, animated: false, completion: nil)
             first.index = index
