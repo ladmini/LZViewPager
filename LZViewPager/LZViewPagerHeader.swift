@@ -25,8 +25,8 @@ extension UIButton {
 }
 
 class LZViewPagerHeader: UIScrollView {
-    var pagerDelegate: LZViewPagerDelegate?
-    var dataSource: LZViewPagerDataSource?
+    weak var pagerDelegate: LZViewPagerDelegate?
+    weak var dataSource: LZViewPagerDataSource?
     var onSelectionChanged: ((_ newIndex: Int, _ animated: Bool) -> ())?
     var currentIndex: Int?
 

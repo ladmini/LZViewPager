@@ -28,11 +28,6 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
         button.setTitleColor(UIColor.black.withAlphaComponent(0.2), for: .normal)
         return button
     }
-    
-    func colorForIndicator(at index: Int) -> UIColor {
-//        return UIColor.blue.withAlphaComponent(CGFloat(index) / 4.0)
-        return UIColor.blue
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +61,22 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
         guard let currentIndex = viewPager.currentIndex else { return }
         let nextIndex = currentIndex + 1 > self.numberOfItems() - 1 ? 0 : currentIndex + 1
         viewPager.select(index: nextIndex, animated: true)
+    }
+    
+    func heightForIndicator() -> CGFloat {
+        return 10
+    }
+    
+    func colorForIndicator(at index: Int) -> UIColor {
+        if index == 0 {
+            return .red
+        } else if index == 1 {
+            return .yellow
+        } else if index == 2 {
+            return .green
+        } else {
+            return .black
+        }
     }
     
 //    func backgroundColorForHeader() -> UIColor {

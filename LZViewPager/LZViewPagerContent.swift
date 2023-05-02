@@ -47,9 +47,9 @@ extension UIPageViewController {
 }
 
 class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
-    var delegate: LZViewPagerDelegate?
-    var dataSource: LZViewPagerDataSource?
-    var hostController: UIViewController?
+    weak var delegate: LZViewPagerDelegate?
+    weak var dataSource: LZViewPagerDataSource?
+    weak var hostController: UIViewController?
     var currentIndex: Int? 
     var onSelectionChanged: ((_ newIndex: Int) -> ())?
     

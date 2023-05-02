@@ -56,8 +56,8 @@ class LZConstants {
 }
 
 public class LZViewPager : UIView {
-    @IBOutlet public var delegate: LZViewPagerDelegate?
-    @IBOutlet public var dataSource: LZViewPagerDataSource?
+    @IBOutlet public weak var delegate: LZViewPagerDelegate?
+    @IBOutlet public weak var dataSource: LZViewPagerDataSource?
     public var hostController: UIViewController?
     //If empty datasource then the currentIndex will return nil
     public var currentIndex: Int? {

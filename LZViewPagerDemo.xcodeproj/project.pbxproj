@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,19 +25,18 @@
 		AC21890320C66CB50075DE35 /* ContentViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC21890220C66CB50075DE35 /* ContentViewController2.swift */; };
 		AC21890520C66CBF0075DE35 /* ContentViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC21890420C66CBF0075DE35 /* ContentViewController3.swift */; };
 		AC21890720C66CCA0075DE35 /* ContentViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC21890620C66CCA0075DE35 /* ContentViewController4.swift */; };
+		ACAA1DD12A00B7E800FC031C /* SnapKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACAA1DD02A00B7E800FC031C /* SnapKit.xcframework */; };
+		ACAA1DD22A00B7E800FC031C /* SnapKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACAA1DD02A00B7E800FC031C /* SnapKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACAAC25020C7ABDE0050C6FE /* LZViewPager.h in Headers */ = {isa = PBXBuildFile; fileRef = ACAAC24E20C7ABDE0050C6FE /* LZViewPager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACAAC25920C7AC130050C6FE /* LZViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188F720C669340075DE35 /* LZViewPager.swift */; };
 		ACAAC25A20C7AC130050C6FE /* LZViewPagerContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188F820C669340075DE35 /* LZViewPagerContent.swift */; };
 		ACAAC25B20C7AC130050C6FE /* LZViewPagerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2188F920C669340075DE35 /* LZViewPagerHeader.swift */; };
-		ACAAC27120C7DFAA0050C6FE /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACAAC26E20C7DF9A0050C6FE /* SnapKit.framework */; };
 		ACB03C2B20F47B190016B47A /* ViewController9.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB03C2A20F47B190016B47A /* ViewController9.swift */; };
 		ACE4175F20D8ADE8004AA14B /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4175E20D8ADE8004AA14B /* ImageButton.swift */; };
 		ACE4176120D8B053004AA14B /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4176020D8B053004AA14B /* ViewController5.swift */; };
 		ACE4176520D8E349004AA14B /* ViewController7.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4176220D8E349004AA14B /* ViewController7.swift */; };
 		ACE4176620D8E349004AA14B /* ViewController6.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4176320D8E349004AA14B /* ViewController6.swift */; };
 		ACE4176720D8E349004AA14B /* ViewController8.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4176420D8E349004AA14B /* ViewController8.swift */; };
-		ACF21C3E244C51E900EA9213 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACAAC25F20C7D8D60050C6FE /* SnapKit.framework */; };
-		ACF21C3F244C51E900EA9213 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACAAC25F20C7D8D60050C6FE /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,7 +46,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ACF21C3F244C51E900EA9213 /* SnapKit.framework in Embed Frameworks */,
+				ACAA1DD22A00B7E800FC031C /* SnapKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,19 +75,10 @@
 		AC21890220C66CB50075DE35 /* ContentViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController2.swift; sourceTree = "<group>"; };
 		AC21890420C66CBF0075DE35 /* ContentViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController3.swift; sourceTree = "<group>"; };
 		AC21890620C66CCA0075DE35 /* ContentViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController4.swift; sourceTree = "<group>"; };
+		ACAA1DD02A00B7E800FC031C /* SnapKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SnapKit.xcframework; path = Carthage/Build/SnapKit.xcframework; sourceTree = "<group>"; };
 		ACAAC24C20C7ABDE0050C6FE /* LZViewPager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LZViewPager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAAC24E20C7ABDE0050C6FE /* LZViewPager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZViewPager.h; sourceTree = "<group>"; };
 		ACAAC24F20C7ABDE0050C6FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACAAC25F20C7D8D60050C6FE /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
-		ACAAC26820C7DF9A0050C6FE /* 1ED691FA-E9A3-3C98-A714-06EF065970E2.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1ED691FA-E9A3-3C98-A714-06EF065970E2.bcsymbolmap"; sourceTree = "<group>"; };
-		ACAAC26920C7DF9A0050C6FE /* E7A34877-B1BE-316A-9641-465585314954.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "E7A34877-B1BE-316A-9641-465585314954.bcsymbolmap"; sourceTree = "<group>"; };
-		ACAAC26A20C7DF9A0050C6FE /* DE697503-3143-3561-865B-FE7295A8A9D1.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "DE697503-3143-3561-865B-FE7295A8A9D1.bcsymbolmap"; sourceTree = "<group>"; };
-		ACAAC26B20C7DF9A0050C6FE /* SnapKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = SnapKit.framework.dSYM; sourceTree = "<group>"; };
-		ACAAC26C20C7DF9A0050C6FE /* 82F8D0EA-635F-3545-AD0E-610795854669.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "82F8D0EA-635F-3545-AD0E-610795854669.bcsymbolmap"; sourceTree = "<group>"; };
-		ACAAC26D20C7DF9A0050C6FE /* LZViewPager.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = LZViewPager.framework.dSYM; sourceTree = "<group>"; };
-		ACAAC26E20C7DF9A0050C6FE /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
-		ACAAC26F20C7DF9A0050C6FE /* 76A4EC05-ECEB-32F4-98EB-F231510E7C01.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "76A4EC05-ECEB-32F4-98EB-F231510E7C01.bcsymbolmap"; sourceTree = "<group>"; };
-		ACAAC27020C7DF9A0050C6FE /* LZViewPager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LZViewPager.framework; sourceTree = "<group>"; };
 		ACB03C2A20F47B190016B47A /* ViewController9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController9.swift; sourceTree = "<group>"; };
 		ACE4175E20D8ADE8004AA14B /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
 		ACE4176020D8B053004AA14B /* ViewController5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
@@ -103,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACF21C3E244C51E900EA9213 /* SnapKit.framework in Frameworks */,
+				ACAA1DD12A00B7E800FC031C /* SnapKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACAAC27120C7DFAA0050C6FE /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +110,7 @@
 		56316FED87A1208C5D918EAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ACAAC26720C7DF9A0050C6FE /* iOS */,
-				ACAAC25F20C7D8D60050C6FE /* SnapKit.framework */,
+				ACAA1DD02A00B7E800FC031C /* SnapKit.xcframework */,
 				EA4039B533C81255F7B522AE /* Pods_LZViewPagerDemo.framework */,
 				535C83BC27C6C7FF4D57A521 /* Pods_LZViewPager.framework */,
 			);
@@ -203,23 +191,6 @@
 				ACAAC24F20C7ABDE0050C6FE /* Info.plist */,
 			);
 			path = LZViewPagerFramework;
-			sourceTree = "<group>";
-		};
-		ACAAC26720C7DF9A0050C6FE /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				ACAAC26820C7DF9A0050C6FE /* 1ED691FA-E9A3-3C98-A714-06EF065970E2.bcsymbolmap */,
-				ACAAC26920C7DF9A0050C6FE /* E7A34877-B1BE-316A-9641-465585314954.bcsymbolmap */,
-				ACAAC26A20C7DF9A0050C6FE /* DE697503-3143-3561-865B-FE7295A8A9D1.bcsymbolmap */,
-				ACAAC26B20C7DF9A0050C6FE /* SnapKit.framework.dSYM */,
-				ACAAC26C20C7DF9A0050C6FE /* 82F8D0EA-635F-3545-AD0E-610795854669.bcsymbolmap */,
-				ACAAC26D20C7DF9A0050C6FE /* LZViewPager.framework.dSYM */,
-				ACAAC26E20C7DF9A0050C6FE /* SnapKit.framework */,
-				ACAAC26F20C7DF9A0050C6FE /* 76A4EC05-ECEB-32F4-98EB-F231510E7C01.bcsymbolmap */,
-				ACAAC27020C7DF9A0050C6FE /* LZViewPager.framework */,
-			);
-			name = iOS;
-			path = Carthage/Build/iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
