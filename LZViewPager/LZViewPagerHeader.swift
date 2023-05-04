@@ -206,11 +206,11 @@ class LZViewPagerHeader: UIScrollView {
             } else {
                 make.centerY.equalToSuperview()
                 if s.buttonsAlignment == .left {
-                    make.leading.equalToSuperview()
+                    make.leading.equalTo(s.superview!.snp.leading)
                 } else if s.buttonsAlignment == .center {
                     make.center.equalToSuperview()
                 } else if s.buttonsAlignment == .right {
-                    make.leading.equalToSuperview()
+                    make.trailing.equalTo(s.superview!.snp.trailing)
                 }
             }
         }
