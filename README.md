@@ -35,7 +35,7 @@ LZViewPager requires iOS 10, Swift 5
 LZViewPager is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'LZViewPager', '~> 1.2.5'
+pod 'LZViewPager'
 ```
 
 And run `pod install`.
@@ -63,8 +63,17 @@ Since this project depends on SnapKit(A Swift Autolayout DSL for iOS & OS X). Yo
 
 ```ogdl
 github "SnapKit/SnapKit" ~> 5.0.0
-github "ladmini/LZViewPager" ~> 1.2.7
+github "ladmini/LZViewPager"
 ```
+
+
+#### Swift Package Manager
+```ogdl
+dependencies: [
+    .package(url: "https://github.com/ladmini/LZViewPager", .upToNextMajor(from: "1.2.8"))
+]
+```
+
 ### Manually
 If you prefer not to use either of the aforementioned dependency managers, you can integrate LZViewPager into your project manually. Just copy the following 3 files into your project.
 
