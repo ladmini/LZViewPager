@@ -67,7 +67,7 @@ github "ladmini/LZViewPager"
 ```
 
 
-#### Swift Package Manager
+### Swift Package Manager
 ```ogdl
 dependencies: [
     .package(url: "https://github.com/ladmini/LZViewPager", .upToNextMajor(from: "1.2.8"))
