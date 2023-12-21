@@ -27,7 +27,7 @@ class LZConstants {
     @objc optional func heightForHeader() -> CGFloat // default is 40
     @objc optional func backgroundColorForHeader() -> UIColor // default is .white
     @objc optional func heightForIndicator() -> CGFloat // default is 2.0
-    @objc optional func colorForIndicator(at index: Int) -> UIColor // default is true UIColor(red: 255.0/255.0, green: 36.0/255.0, blue: 79.0/255.0, alpha: 1.0)
+    @objc optional func colorForIndicator(at index: Int) -> UIColor // default is UIColor(red: 255.0/255.0, green: 36.0/255.0, blue: 79.0/255.0, alpha: 1.0)
     @objc optional func shouldShowIndicator() -> Bool // default is true
     @objc optional func widthForButton(at index: Int) -> CGFloat // default is bounds.width / count
     @objc optional func widthForIndicator(at index: Int) -> CGFloat // default is equals to button's width
@@ -58,7 +58,7 @@ class LZConstants {
 public class LZViewPager : UIView {
     @IBOutlet public weak var delegate: LZViewPagerDelegate?
     @IBOutlet public weak var dataSource: LZViewPagerDataSource?
-    public var hostController: UIViewController?
+    public weak var hostController: UIViewController?
     //If empty datasource then the currentIndex will return nil
     public var currentIndex: Int? {
         return self.contentView.currentIndex

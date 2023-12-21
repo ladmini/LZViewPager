@@ -176,6 +176,11 @@ class LZViewPagerHeader: UIScrollView {
     }
     
     public func reload() {
+        if let idx = currentIndex, let buttonCount = self.dataSource?.numberOfItems() {
+            if idx >= buttonCount {
+                currentIndex = 0
+            }
+        }
         if self.bounds.size.width == 0 {
             return
         }

@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIViewController {
-    static func createFromNib<T: UIViewController>(storyBoardId: String) -> T?{
+    static func createFromNib<T: UIViewController>(storyBoardId: String) -> T? {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: storyBoardId) as? T
     }
 }

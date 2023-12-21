@@ -52,6 +52,11 @@ class ViewController4: BaseViewController, LZViewPagerDelegate, LZViewPagerDataS
         subControllers = [vc1, vc2, vc3, vc4]
         viewPager.hostController = self
         viewPager.reload()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [self] in
+            subControllers.remove(at: 0)
+            viewPager.reload()
+        }
     }
     
     func widthForButton(at index: Int) -> CGFloat {

@@ -121,8 +121,12 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
     }
     
     public func reload() {
-        guard let index = self.currentIndex else {
+        guard var index = self.currentIndex, let itemsCount = self.dataSource?.numberOfItems() else {
             return
+        }
+        if index >= itemsCount {
+            index = 0
+            currentIndex = 0
         }
         guard let _ = hostController else {
             assertionFailure("You must specify a host controller")
