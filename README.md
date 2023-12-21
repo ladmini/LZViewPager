@@ -27,7 +27,7 @@
 - [x] Header scrollable, if the width of buttons is larger than the width of the current view.
 
 ## 📋 Requirements
-LZViewPager requires iOS 10, Swift 5
+LZViewPager requires iOS 10+ (Tested on iOS 17), Swift 5.
 
 
 ## 📲 Installation
@@ -70,7 +70,7 @@ github "ladmini/LZViewPager"
 ### Swift Package Manager
 ```ogdl
 dependencies: [
-    .package(url: "https://github.com/ladmini/LZViewPager", .upToNextMajor(from: "1.2.8"))
+    .package(url: "https://github.com/ladmini/LZViewPager", .upToNextMajor(from: "1.2.9"))
 ]
 ```
 
@@ -148,15 +148,15 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
 You can customize you button styles in datasource method "func button(at index: Int) -> UIButton" you can also customize other styles by implementing other datasource methods example:
 
 ```swift
-func heightForHeader() -> CGFloat
-func backgroundColorForHeader() -> UIColor
-func heightForIndicator(at index: Int) -> CGFloat
-func colorForIndicator(at index: Int) -> UIColor
-func shouldShowIndicator() -> Bool
-func widthForButton(at index: Int) -> CGFloat
-func widthForIndicator(at index: Int) -> CGFloat
-func buttonsAligment() -> ButtonsAlignment
-func shouldEnableSwipeable() -> Bool
+func heightForHeader() -> CGFloat // default is 40
+func backgroundColorForHeader() -> UIColor // default is .white
+func heightForIndicator() -> CGFloat // default is 2.0
+func colorForIndicator(at index: Int) -> UIColor // default is UIColor(red: 255.0/255.0, green: 36.0/255.0, blue: 79.0/255.0, alpha: 1.0)
+func shouldShowIndicator() -> Bool // default is true
+func widthForButton(at index: Int) -> CGFloat // default is bounds.width / count
+func widthForIndicator(at index: Int) -> CGFloat // default is equals to button's width
+func buttonsAligment() -> ButtonsAlignment // default is .left
+func shouldEnableSwipeable() -> Bool // default is true
 func leftMarginForHeader() -> CGFloat //default is 0
 func rightMarginForHeader() -> CGFloat //default is 0
 func shouldShowSeparator() -> Bool // default is false
@@ -172,6 +172,12 @@ func topMarginForSeparator() -> CGFloat //default is 0
 Implementing delegate methods if needed
 
 ```swift
+//required
+func numberOfItems() -> Int
+func controller(at index: Int) -> UIViewController
+func button(at index: Int) -> UIButton
+
+//optional
 func didSelectButton(at index: Int)
 func willTransition(to index: Int)
 func didTransition(to index: Int)
