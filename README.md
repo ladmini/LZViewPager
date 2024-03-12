@@ -145,8 +145,11 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
 3) All done! 🎉
 
 ## Customization
-You can customize you button styles in datasource method "func button(at index: Int) -> UIButton" you can also customize other styles by implementing other datasource methods example:
-
+You can customize you button styles in datasource method 
+```swift
+func button(at index: Int) -> UIButton
+```
+you can also customize other styles by implementing other datasource methods example:
 ```swift
 func heightForHeader() -> CGFloat // default is 40
 func backgroundColorForHeader() -> UIColor // default is .white
