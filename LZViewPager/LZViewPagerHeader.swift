@@ -43,7 +43,12 @@ class LZViewPagerHeader: UIScrollView {
     }()
     
     private lazy var indicatorView: UIView = {
-        return UIView(frame: CGRect.zero)
+        let view = UIView(frame: CGRect.zero)
+        if let cornerRadius = self.dataSource?.cornerRadiusForIndicator?(), cornerRadius > 0 {
+            view.layer.cornerRadius = cornerRadius
+            view.layer.masksToBounds = true
+        }
+        return view
     }()
     
     private var buttonsWidth: CGFloat {

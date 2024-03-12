@@ -42,6 +42,7 @@ class LZConstants {
     @objc optional func leftMarginForSeparator() -> CGFloat //default is 0
     @objc optional func rightMarginForSeparator() -> CGFloat //default is 0
     @objc optional func topMarginForSeparator() -> CGFloat //default is 0
+    @objc optional func cornerRadiusForIndicator() -> CGFloat //default is 0
 
     
     func numberOfItems() -> Int

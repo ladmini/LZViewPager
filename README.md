@@ -27,7 +27,7 @@
 - [x] Header scrollable, if the width of buttons is larger than the width of the current view.
 
 ## 📋 Requirements
-LZViewPager requires iOS 10+ (Tested on iOS 17), Swift 5.
+LZViewPager requires iOS 12+ (Tested on iOS 17), Swift 5.
 
 
 ## 📲 Installation
@@ -70,7 +70,7 @@ github "ladmini/LZViewPager"
 ### Swift Package Manager
 ```ogdl
 dependencies: [
-    .package(url: "https://github.com/ladmini/LZViewPager", .upToNextMajor(from: "1.2.9"))
+    .package(url: "https://github.com/ladmini/LZViewPager", .upToNextMajor(from: "1.3.0"))
 ]
 ```
 
@@ -165,6 +165,7 @@ func heightForSeparator() -> CGFloat // default is 2.0
 func leftMarginForSeparator() -> CGFloat //default is 0
 func rightMarginForSeparator() -> CGFloat //default is 0
 func topMarginForSeparator() -> CGFloat //default is 0
+func cornerRadiusForIndicator() -> CGFloat //default is 0
 ```
 
 

@@ -59,6 +59,14 @@ class ViewController9: BaseViewController, LZViewPagerDelegate, LZViewPagerDataS
         return 130
     }
     
+    func heightForIndicator() -> CGFloat {
+        return 5
+    }
+    
+    func cornerRadiusForIndicator() -> CGFloat {
+        return 2.5
+    }
+    
     func willTransition(to index: Int) {
         print("Current index before transition: \(viewPager.currentIndex ?? -1)")
     }

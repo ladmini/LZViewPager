@@ -67,6 +67,10 @@ class ViewController: BaseViewController, LZViewPagerDelegate, LZViewPagerDataSo
         return 10
     }
     
+    func cornerRadiusForIndicator() -> CGFloat {
+        return 5.0
+    }
+    
     func colorForIndicator(at index: Int) -> UIColor {
         if index == 0 {
             return .red
