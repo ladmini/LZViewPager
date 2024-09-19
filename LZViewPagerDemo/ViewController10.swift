@@ -57,7 +57,8 @@ class ViewController10: BaseViewController, LZViewPagerDelegate, LZViewPagerData
     
     
     func widthForButton(at index: Int) -> CGFloat{
-        
+        print("widthForButton at index: \(index)")
+        assert(index < subControllers.count)
         if index > 2 {
             
             //                Tools.p(val: index,"widthForButton index ")
@@ -69,7 +70,8 @@ class ViewController10: BaseViewController, LZViewPagerDelegate, LZViewPagerData
     }
     
     func widthForIndicator(at index: Int) -> CGFloat{
-        
+        print("widthForIndicator at index: \(index)")
+        assert(index < subControllers.count)
         if index > 2 {
             
             //                Tools.p(val: index,"widthForIndicator index")
