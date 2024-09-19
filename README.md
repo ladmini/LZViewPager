@@ -62,7 +62,7 @@ $ brew install carthage
 Since this project depends on SnapKit(A Swift Autolayout DSL for iOS & OS X). You can add LZViewPager to your `Cartfile` like this:
 
 ```ogdl
-github "SnapKit/SnapKit" ~> 5.0.0
+github "SnapKit/SnapKit" ~> 5.7.0
 github "ladmini/LZViewPager"
 ```
 
